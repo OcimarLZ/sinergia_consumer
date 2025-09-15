@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "distribuidora_id": 1,
+    "distribuidora_nome": "CEAL - Companhia Energética de Alagoas",
+    "consumo_min": 300,
+    "consumo_max": 500,
+    "desconto_percentual": 5.0,
+    "tipo_bonus": "A",
+    "descricao": "Desconto básico para consumo baixo",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "distribuidora_id": 1,
+    "distribuidora_nome": "CEAL - Companhia Energética de Alagoas",
+    "consumo_min": 501,
+    "consumo_max": 1000,
+    "desconto_percentual": 8.0,
+    "tipo_bonus": "B",
+    "descricao": "Desconto médio para consumo moderado",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "distribuidora_id": 1,
+    "distribuidora_nome": "CEAL - Companhia Energética de Alagoas",
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "desconto_percentual": 12.0,
+    "tipo_bonus": "C",
+    "descricao": "Desconto alto para consumo elevado",
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "distribuidora_id": 2,
+    "distribuidora_nome": "COELBA - Companhia de Eletricidade do Estado da Bahia",
+    "consumo_min": 400,
+    "consumo_max": 600,
+    "desconto_percentual": 6.0,
+    "tipo_bonus": "A",
+    "descricao": "Desconto básico para consumo baixo",
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "distribuidora_id": 2,
+    "distribuidora_nome": "COELBA - Companhia de Eletricidade do Estado da Bahia",
+    "consumo_min": 601,
+    "consumo_max": 1200,
+    "desconto_percentual": 9.0,
+    "tipo_bonus": "B",
+    "descricao": "Desconto médio para consumo moderado",
+    "ativo": true
+  },
+  {
+    "id": 6,
+    "distribuidora_id": 2,
+    "distribuidora_nome": "COELBA - Companhia de Eletricidade do Estado da Bahia",
+    "consumo_min": 1201,
+    "consumo_max": null,
+    "desconto_percentual": 15.0,
+    "tipo_bonus": "C",
+    "descricao": "Desconto alto para consumo elevado",
+    "ativo": true
+  },
+  {
+    "id": 7,
+    "distribuidora_id": 3,
+    "distribuidora_nome": "ENEL Ceará",
+    "consumo_min": 350,
+    "consumo_max": 550,
+    "desconto_percentual": 7.0,
+    "tipo_bonus": "A",
+    "descricao": "Desconto básico para consumo baixo",
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "distribuidora_id": 3,
+    "distribuidora_nome": "ENEL Ceará",
+    "consumo_min": 551,
+    "consumo_max": 1100,
+    "desconto_percentual": 10.0,
+    "tipo_bonus": "B",
+    "descricao": "Desconto médio para consumo moderado",
+    "ativo": true
+  },
+  {
+    "id": 9,
+    "distribuidora_id": 3,
+    "distribuidora_nome": "ENEL Ceará",
+    "consumo_min": 1101,
+    "consumo_max": null,
+    "desconto_percentual": 13.0,
+    "tipo_bonus": "C",
+    "descricao": "Desconto alto para consumo elevado",
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "distribuidora_id": 9,
+    "distribuidora_nome": "CEMIG - Companhia Energética de Minas Gerais",
+    "consumo_min": 500,
+    "consumo_max": 800,
+    "desconto_percentual": 8.0,
+    "tipo_bonus": "A",
+    "descricao": "Desconto básico para consumo baixo",
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "distribuidora_id": 9,
+    "distribuidora_nome": "CEMIG - Companhia Energética de Minas Gerais",
+    "consumo_min": 801,
+    "consumo_max": 1500,
+    "desconto_percentual": 12.0,
+    "tipo_bonus": "B",
+    "descricao": "Desconto médio para consumo moderado",
+    "ativo": true
+  },
+  {
+    "id": 12,
+    "distribuidora_id": 9,
+    "distribuidora_nome": "CEMIG - Companhia Energética de Minas Gerais",
+    "consumo_min": 1501,
+    "consumo_max": null,
+    "desconto_percentual": 18.0,
+    "tipo_bonus": "C",
+    "descricao": "Desconto alto para consumo elevado",
+    "ativo": true
+  },
+  {
+    "id": 13,
+    "distribuidora_id": 19,
+    "distribuidora_nome": "ENEL São Paulo",
+    "consumo_min": 800,
+    "consumo_max": 1200,
+    "desconto_percentual": 10.0,
+    "tipo_bonus": "A",
+    "descricao": "Desconto básico para consumo baixo",
+    "ativo": true
+  },
+  {
+    "id": 14,
+    "distribuidora_id": 19,
+    "distribuidora_nome": "ENEL São Paulo",
+    "consumo_min": 1201,
+    "consumo_max": 2000,
+    "desconto_percentual": 15.0,
+    "tipo_bonus": "B",
+    "descricao": "Desconto médio para consumo moderado",
+    "ativo": true
+  },
+  {
+    "id": 15,
+    "distribuidora_id": 19,
+    "distribuidora_nome": "ENEL São Paulo",
+    "consumo_min": 2001,
+    "consumo_max": null,
+    "desconto_percentual": 20.0,
+    "tipo_bonus": "C",
+    "descricao": "Desconto alto para consumo elevado",
+    "ativo": true
+  }
+]

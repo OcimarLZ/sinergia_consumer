@@ -387,6 +387,82 @@ body::before {
   padding: 0;
   margin: 0;
 }
+
+/* Estilos para resultados da simulação */
+.loading-msg, .result-msg, .error-msg {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loading-msg {
+  background-color: #f0f9ff;
+  border: 1px solid #0ea5e9;
+  color: #0369a1;
+}
+
+.result-msg {
+  background-color: #f0fdf4;
+  border: 1px solid #22c55e;
+}
+
+.error-msg {
+  background-color: #fef2f2;
+  border: 1px solid #ef4444;
+  color: #dc2626;
+}
+
+.resultado-positivo {
+  color: #166534;
+}
+
+.resultado-negativo {
+  color: #dc2626;
+}
+
+.detalhes-economia {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+}
+
+.detalhes-economia p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.contato-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+}
+
+.contato-info p {
+  margin: 8px 0;
+  color: #fff;
+}
+
+.contato-info em {
+  color: #B3E5FC;
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.result-msg h3 {
+  margin: 0 0 1rem 0;
+  color: #166534;
+}
+
+.result-msg .btn {
+  margin-top: 1rem;
+}
 .card h2 {
   margin: 0 0 8px;
   font-size: 1.5rem;
@@ -399,7 +475,7 @@ body::before {
   font-size: 0.9375rem;
 }
 .field {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* Removida a limitação de largura máxima para que os campos utilizem todo o espaço disponível */
@@ -407,27 +483,28 @@ body::before {
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   color: #ffffff;
 }
 .field input[type="text"],
 .field input[type="tel"],
 .field select {
   width: 100%;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 0.75rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 46px;
+  height: 44px;
   font-weight: 500;
   box-sizing: border-box;
 }
 .field input::placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  font-size: 0.75rem;
 }
 .field input:focus,
 .field select:focus {
@@ -466,14 +543,14 @@ body::before {
 .checkbox {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
   color: #ffffff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.1);
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 8px;
   margin-top: 5px;
 }
@@ -506,12 +583,12 @@ body::before {
 }
 .privacy-hint {
   text-align: center;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: #ffffff !important;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.05);
-  padding: 6px 10px;
+  padding: 5px 8px;
   border-radius: 20px;
   display: inline-block;
   width: auto;
@@ -1397,7 +1474,7 @@ mark {
 /* Ajustes específicos para seções */
 @media (min-width: 960px) {
   .faq-hero { padding: 48px 0 28px; }
-  .faq-section { scroll-margin-top: 90px; }
+  /* .faq-section { scroll-margin-top: 90px; } - Removido para evitar scroll automático */
 }
 
 /* FAQ Section Navigation Styles */
@@ -1453,15 +1530,15 @@ mark {
 
 /* Prevent unwanted scrolling on FAQ interactions */
 .faq-item summary {
-  scroll-margin-top: 100px;
+  /* scroll-margin-top: 100px; - Removido para evitar scroll automático */
 }
 
 .faq-item {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; - Removido para evitar scroll automático */
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; - Removido para evitar scroll automático */
 }
 
 @media (max-width: 768px) {

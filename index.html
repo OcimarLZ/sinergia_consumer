@@ -51,8 +51,8 @@
           </ul>
 
           <div class="cta-group">
-            <a class="btn btn-primary" href="simulador.html">Simular minha economia</a>
-            <a class="btn btn-secondary" href="https://wa.me/55SEUNUMERO?text=Tenho%20d%C3%BAvidas%20sobre%20portabilidade" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn-primary" href="#simulacao">Simular minha economia</a>
+            <a class="btn btn-secondary" href="https://wa.me/5549988558025?text=Tenho%20d%C3%BAvidas%20sobre%20portabilidade" target="_blank" rel="noopener">Falar no WhatsApp</a>
           </div>
 
           <p class="microcopy">Sem compromisso. Retorno em até 1 dia útil. Nunca solicitamos códigos de confirmação.</p>
@@ -77,33 +77,43 @@
                 <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
               </div>
 
+              <div class="field field-email">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              </div>
+
               <div class="field field-whats">
                 <label for="whats">WhatsApp</label>
                 <input type="tel" id="whats" name="whats" inputmode="tel" placeholder="(DDD) 9 9999-9999" required />
               </div>
 
-              <div class="field field-uf">
-                <label for="uf">Estado (UF)</label>
-                <select id="uf" name="uf" required>
-                  <option value="" selected>Selecione</option>
-                  <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-                  <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-                  <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-                  <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-                  <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-                  <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-                  <option>SP</option><option>SE</option><option>TO</option>
+              <div class="field field-estado">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                  <option value="" selected>Selecione seu estado</option>
                 </select>
               </div>
 
-              <fieldset class="field">
-                <legend>Interesse</legend>
-                <div class="choices">
-                  <label class="choice"><input type="checkbox" name="interesse" value="energia" /> Energia</label>
-                  <label class="choice"><input type="checkbox" name="interesse" value="telefonia" /> Telefonia</label>
-                  <label class="choice"><input type="checkbox" name="interesse" value="ambos" /> Ambos</label>
-                </div>
-              </fieldset>
+              <div class="field field-distribuidora">
+                <label for="distribuidora">Distribuidora</label>
+                <select id="distribuidora" name="distribuidora" required disabled>
+                  <option value="" selected>Primeiro selecione o estado</option>
+                </select>
+              </div>
+
+              <div class="field field-perfil">
+                <label for="perfil">Perfil de Consumidor</label>
+                <select id="perfil" name="perfil" required>
+                  <option value="" selected>Selecione</option>
+                  <option value="pessoa_fisica">Pessoa Física</option>
+                  <option value="pessoa_juridica">Pessoa Jurídica</option>
+                </select>
+              </div>
+
+              <div class="field field-consumo">
+                <label for="consumo">Consumo mensal (kWh)</label>
+                <input type="number" id="consumo" name="consumo" placeholder="Ex: 500" min="1" required />
+              </div>
 
               <div class="field field-consent">
                 <label class="checkbox">
@@ -112,12 +122,22 @@
                 </label>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block">Quero simular agora</button>
-              <p class="privacy-hint">Privacidade garantida • Cancelamento a qualquer momento</p>
+              <button type="submit" class="btn btn-primary btn-block">Simular economia</button>
+              <p class="privacy-hint">Simulação gratuita • Sem compromisso</p>
 
-              <p class="success-msg" role="status" aria-live="polite" hidden>
-                Obrigado! Recebemos sua solicitação. Em breve entraremos em contato.
-              </p>
+              <div class="loading-msg" role="status" aria-live="polite" hidden>
+                <p>Calculando sua economia...</p>
+              </div>
+
+              <div class="result-msg" role="status" aria-live="polite" hidden>
+                <h3>Resultado da Simulação</h3>
+                <div id="resultado-conteudo"></div>
+                <button type="button" class="btn btn-secondary" onclick="novaSimulacao()">Nova simulação</button>
+              </div>
+
+              <div class="error-msg" role="status" aria-live="polite" hidden>
+                <p>Erro ao calcular simulação. Tente novamente.</p>
+              </div>
             </form>
           </div>
         </div>
@@ -403,7 +423,7 @@
             
             <h4>Para Consumidores do Grupo B (Pessoa Física ou Jurídica)</h4>
             <p>Se você é um consumidor classificado no Grupo B – seja pessoa física ou jurídica – e sua instalação é monofásica, bifásica ou trifásica, pode ser elegível para a portabilidade simplificada. Esta solução é destinada a unidades consumidoras com um limite de consumo de até 8.000 kWh por mês.</p>
-            <p>A adesão é facilitada através do aplicativo IGreen. Para garantir sua aptidão e compreender as particularidades da sua região, é fundamental que você consulte as regras específicas da sua distribuidora de energia, acessíveis através deste <a href="#distribuidoras">link</a>.</p>
+            <p>A adesão é facilitada através do aplicativo IGreen. Para garantir sua aptidão e compreender as particularidades da sua região, é fundamental que você consulte as regras específicas da sua distribuidora de energia na seção "Cobertura e Distribuidoras" abaixo.</p>
 
             <h4>Para Consumidores do Grupo A (Alta Demanda)</h4>
             <p>Para as empresas classificadas no Grupo A, que representam os consumidores de alta demanda, a portabilidade de energia é realizada por meio de um processo mais customizado. Nesses casos, nossa equipe comercial estabelece contatos diretos e negociações com os gestores da empresa consumidora, visando soluções personalizadas para suas necessidades energéticas.</p>
@@ -417,7 +437,7 @@
               <li><strong>Ponto Ativo e Medição Regular:</strong> O ponto de consumo deve estar ativo e com a medição de energia funcionando regularmente, sem impedimentos ou irregularidades.</li>
             </ul>
             <p>Para saber mais e verificar sua elegibilidade, entre em contato com a Sinergia ou acesse o aplicativo IGreen!</p>
-            <p><strong>Para verificar se a distribuidora que lhe atende aceita portabilidade com a Sinergia/Igreen, <a href="#distribuidoras">clique aqui</a>.</strong></p>
+            <p><strong>Para verificar se a distribuidora que lhe atende aceita portabilidade com a Sinergia/Igreen, consulte a seção "Cobertura e Distribuidoras" abaixo.</strong></p>
           </div>
         </details>
 
@@ -1245,7 +1265,7 @@
 
       <!-- CTA FINAL -->
       <div class="faq-cta-final">
-        <a class="btn btn-primary btn-lg" href="https://wa.me/55SEUNUMERO"  rel="noopener">
+        <a class="btn btn-primary btn-lg" href="https://wa.me/5549988558025"  rel="noopener">
           Tirar dúvidas no WhatsApp
         </a>
         <p class="helper">Envie seu CEP e uma fatura recente para análise sem custo.</p>
@@ -1260,7 +1280,7 @@
         <p>Simule agora quanto você pode economizar com a portabilidade de energia e telefonia.</p>
         <div class="cta-buttons">
           <a href="#simulacao" class="btn btn-primary btn-lg">Simular economia</a>
-          <a href="https://wa.me/55SEUNUMERO" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar com consultor</a>
+          <a href="https://wa.me/5549988558025" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar com consultor</a>
         </div>
       </div>
     </section>
@@ -1289,7 +1309,7 @@
         <div class="footer-contact">
           <h3>Contato</h3>
           <ul>
-            <li><a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://wa.me/5549988558025" target="_blank" rel="noopener">WhatsApp</a></li>
             <li><a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></li>
             <li><a href="tel:+5500000000000">(00) 0000-0000</a></li>
           </ul>
@@ -1363,24 +1383,295 @@
 
   <!-- Scripts para funcionalidades da página -->
   <script>
-    // Formulário de simulação
-    const leadForm = document.getElementById('leadForm');
-    const successMsg = document.querySelector('.success-msg');
+    // Configuração dos dados estáticos
+    const DATA_BASE_URL = './static/data';
     
+    // Elementos do formulário
+     const leadForm = document.getElementById('leadForm');
+     const nomeInput = document.getElementById('nome');
+     const emailInput = document.getElementById('email');
+     const whatsInput = document.getElementById('whats');
+     const estadoSelect = document.getElementById('estado');
+     const distribuidoraSelect = document.getElementById('distribuidora');
+     const perfilSelect = document.getElementById('perfil');
+     const consumoInput = document.getElementById('consumo');
+     const loadingMsg = document.querySelector('.loading-msg');
+     const resultMsg = document.querySelector('.result-msg');
+     const errorMsg = document.querySelector('.error-msg');
+     const resultadoConteudo = document.getElementById('resultado-conteudo');
+    
+    // Carregar estados ao inicializar
+    async function carregarEstados() {
+      try {
+        const response = await fetch(`${DATA_BASE_URL}/estados.json`);
+        const estados = await response.json();
+        
+        estadoSelect.innerHTML = '<option value="">Selecione seu estado</option>';
+        estados.forEach(estado => {
+          const option = document.createElement('option');
+          option.value = estado.id;
+          option.textContent = `${estado.nome} (${estado.sigla})`;
+          estadoSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error('Erro ao carregar estados:', error);
+      }
+    }
+    
+    // Carregar distribuidoras por estado
+    async function carregarDistribuidoras(estadoId) {
+      try {
+        distribuidoraSelect.innerHTML = '<option value="">Carregando...</option>';
+        distribuidoraSelect.disabled = true;
+        
+        const response = await fetch(`${DATA_BASE_URL}/distribuidoras.json`);
+        const distribuidoras = await response.json();
+        
+        // Filtrar distribuidoras pelo estado selecionado
+        const distribuidorasDoEstado = distribuidoras.filter(d => d.estado_id == estadoId);
+        
+        distribuidoraSelect.innerHTML = '<option value="">Selecione a distribuidora</option>';
+        if (distribuidorasDoEstado.length > 0) {
+          distribuidorasDoEstado.forEach(dist => {
+            const option = document.createElement('option');
+            option.value = dist.id;
+            option.textContent = dist.nome;
+            distribuidoraSelect.appendChild(option);
+          });
+          distribuidoraSelect.disabled = false;
+        } else {
+          distribuidoraSelect.innerHTML = '<option value="">Nenhuma distribuidora encontrada</option>';
+        }
+      } catch (error) {
+        console.error('Erro ao carregar distribuidoras:', error);
+        distribuidoraSelect.innerHTML = '<option value="">Erro ao carregar</option>';
+      }
+    }
+    
+    // Simular desconto
+    async function simularDesconto(e) {
+      e.preventDefault();
+      
+      // Esconder mensagens anteriores
+      resultMsg.hidden = true;
+      errorMsg.hidden = true;
+      loadingMsg.hidden = false;
+      
+      // Dados pessoais do lead
+      const leadData = {
+        nome: nomeInput.value,
+        email: emailInput.value,
+        whatsapp: whatsInput.value
+      };
+      
+      try {
+        // Carregar dados necessários
+        const [distribuidorasResponse, regrasResponse] = await Promise.all([
+          fetch(`${DATA_BASE_URL}/distribuidoras.json`),
+          fetch(`${DATA_BASE_URL}/regras_desconto.json`)
+        ]);
+        
+        const distribuidoras = await distribuidorasResponse.json();
+        const regras = await regrasResponse.json();
+        
+        // Dados da simulação
+        const distribuidoraId = parseInt(distribuidoraSelect.value);
+        const consumo = parseFloat(consumoInput.value);
+        
+        // Encontrar distribuidora
+        const distribuidora = distribuidoras.find(d => d.id === distribuidoraId);
+        if (!distribuidora) {
+          throw new Error('Distribuidora não encontrada');
+        }
+        
+        // Verificar consumo mínimo
+        if (consumo < distribuidora.consumo_minimo) {
+          const resultado = {
+            elegivel: false,
+            motivo: `Consumo mínimo exigido: ${distribuidora.consumo_minimo} kWh`,
+            distribuidora: distribuidora.nome
+          };
+          loadingMsg.hidden = true;
+          await processarResultadoCompleto(resultado, leadData);
+          return;
+        }
+        
+        // Encontrar regra de desconto aplicável
+        const regrasDistribuidora = regras.filter(r => r.distribuidora_id === distribuidoraId && r.ativo);
+        let regraAplicavel = null;
+        
+        for (const regra of regrasDistribuidora) {
+          if (consumo >= regra.consumo_min && (regra.consumo_max === null || consumo <= regra.consumo_max)) {
+            regraAplicavel = regra;
+            break;
+          }
+        }
+        
+        if (!regraAplicavel) {
+          const resultado = {
+            elegivel: false,
+            motivo: 'Consumo fora das faixas de desconto disponíveis',
+            distribuidora: distribuidora.nome
+          };
+          loadingMsg.hidden = true;
+          await processarResultadoCompleto(resultado, leadData);
+          return;
+        }
+        
+        // Calcular economia (estimativa baseada em R$ 0,65/kWh)
+        const valorKwh = 0.65;
+        const valorOriginal = consumo * valorKwh;
+        const descontoValor = valorOriginal * (regraAplicavel.desconto_percentual / 100);
+        const valorFinal = valorOriginal - descontoValor;
+        
+        const resultado = {
+          elegivel: true,
+          distribuidora: distribuidora.nome,
+          consumo_kwh: consumo,
+          desconto_percentual: regraAplicavel.desconto_percentual,
+          valor_original: valorOriginal,
+          valor_final: valorFinal,
+          economia_mensal: descontoValor,
+          economia_anual: descontoValor * 12,
+          tipo_bonus: regraAplicavel.tipo_bonus
+        };
+        
+        loadingMsg.hidden = true;
+        await processarResultadoCompleto(resultado, leadData);
+        
+      } catch (error) {
+        console.error('Erro na simulação:', error);
+        loadingMsg.hidden = true;
+        errorMsg.querySelector('p').textContent = 'Erro ao calcular simulação';
+        errorMsg.hidden = false;
+      }
+    }
+    
+    // Processar resultado completo (salvar lead + enviar e-mail + mostrar resultado)
+    async function processarResultadoCompleto(resultado, leadData) {
+      try {
+        // Preparar dados da simulação para salvamento
+        const simulacaoData = {
+          estado: estadoSelect.options[estadoSelect.selectedIndex]?.text || 'N/A',
+          distribuidora: resultado.distribuidora,
+          consumo: resultado.consumo_kwh,
+          valorConta: resultado.valor_original,
+          desconto: resultado.desconto_percentual,
+          economiaMensal: resultado.economia_mensal,
+          economiaAnual: resultado.economia_anual,
+          elegivel: resultado.elegivel,
+          motivo: resultado.motivo
+        };
+
+        // Salvar lead no sistema
+        if (window.leadsManager) {
+          const leadSalvo = window.leadsManager.salvarLead(leadData, simulacaoData);
+          console.log('Lead salvo:', leadSalvo.id);
+        }
+
+        // Enviar e-mail para o cliente
+        if (window.emailManager) {
+          const resultadoEmail = await window.emailManager.enviarSimulacao(leadData, simulacaoData);
+          if (resultadoEmail.sucesso) {
+            console.log('E-mail enviado com sucesso para o cliente');
+          } else {
+            console.warn('Erro ao enviar e-mail para o cliente:', resultadoEmail.erro);
+          }
+
+          // Notificar equipe comercial
+          const resultadoNotificacao = await window.emailManager.notificarEquipeComercial(leadData, simulacaoData);
+          if (resultadoNotificacao.sucesso) {
+            console.log('Equipe comercial notificada');
+          } else {
+            console.warn('Erro ao notificar equipe comercial:', resultadoNotificacao.erro);
+          }
+        }
+
+      } catch (error) {
+        console.error('Erro ao processar resultado:', error);
+      }
+
+      // Mostrar resultado na tela
+      mostrarResultado(resultado, leadData);
+    }
+
+    // Mostrar resultado da simulação
+     function mostrarResultado(resultado, leadData) {
+       let html = '';
+       
+       if (resultado.elegivel) {
+         html = `
+           <div class="resultado-positivo">
+             <p><strong>🎉 Parabéns ${leadData.nome}! Você é elegível para desconto!</strong></p>
+             <div class="detalhes-economia">
+               <p><strong>Distribuidora:</strong> ${resultado.distribuidora}</p>
+               <p><strong>Consumo:</strong> ${resultado.consumo_kwh} kWh</p>
+               <p><strong>Desconto:</strong> ${resultado.desconto_percentual}%</p>
+               <p><strong>Valor original:</strong> R$ ${resultado.valor_original?.toFixed(2) || 'N/A'}</p>
+               <p><strong>Valor com desconto:</strong> R$ ${resultado.valor_final?.toFixed(2) || 'N/A'}</p>
+               <p><strong>Economia mensal:</strong> R$ ${resultado.economia_mensal?.toFixed(2) || resultado.valor_desconto?.toFixed(2) || 'N/A'}</p>
+               <p><strong>Economia anual:</strong> R$ ${resultado.economia_anual?.toFixed(2) || (resultado.valor_desconto * 12)?.toFixed(2) || 'N/A'}</p>
+             </div>
+             <div class="contato-info">
+               <p><strong>📧 E-mail:</strong> ${leadData.email}</p>
+               <p><strong>📱 WhatsApp:</strong> ${leadData.whatsapp}</p>
+               <p><em>✅ Enviamos os detalhes da sua simulação por e-mail!</em></p>
+               <p><em>Em breve nossa equipe entrará em contato para finalizar sua adesão!</em></p>
+             </div>
+           </div>
+         `;
+       } else {
+         html = `
+           <div class="resultado-negativo">
+             <p><strong>❌ ${leadData.nome}, infelizmente não elegível para desconto</strong></p>
+             <p><strong>Motivo:</strong> ${resultado.motivo}</p>
+             <p>Tente com um consumo maior ou entre em contato conosco para mais informações.</p>
+             <div class="contato-info">
+               <p><strong>📧 E-mail:</strong> ${leadData.email}</p>
+               <p><strong>📱 WhatsApp:</strong> ${leadData.whatsapp}</p>
+               <p><em>✅ Enviamos os detalhes da sua simulação por e-mail!</em></p>
+               <p><em>Nossa equipe entrará em contato para avaliar outras opções!</em></p>
+             </div>
+           </div>
+         `;
+       }
+       
+       resultadoConteudo.innerHTML = html;
+       resultMsg.hidden = false;
+     }
+    
+    // Nova simulação
+    function novaSimulacao() {
+      resultMsg.hidden = true;
+      errorMsg.hidden = true;
+      leadForm.reset();
+      distribuidoraSelect.disabled = true;
+      distribuidoraSelect.innerHTML = '<option value="">Primeiro selecione o estado</option>';
+    }
+    
+    // Event listeners
     if (leadForm) {
-      leadForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Aqui você adicionaria a lógica para enviar os dados do formulário
-        // Por exemplo, usando fetch para enviar para uma API
-        
-        // Simulando envio bem-sucedido
-        setTimeout(() => {
-          leadForm.style.display = 'none';
-          successMsg.hidden = false;
-        }, 1000);
+      leadForm.addEventListener('submit', simularDesconto);
+    }
+    
+    if (estadoSelect) {
+      estadoSelect.addEventListener('change', function() {
+        if (this.value) {
+          carregarDistribuidoras(this.value);
+        } else {
+          distribuidoraSelect.disabled = true;
+          distribuidoraSelect.innerHTML = '<option value="">Primeiro selecione o estado</option>';
+        }
       });
     }
+    
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', function() {
+      carregarEstados();
+    });
+    
+    // Tornar função global para o botão
+    window.novaSimulacao = novaSimulacao;
     
     // Busca e highlight no FAQ
     const searchInput = document.getElementById('faqQuery');
@@ -1507,35 +1798,27 @@
     // Acessibilidade: fechar outros details quando um é aberto
     summaries.forEach(summary => {
       summary.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Store current scroll position
-        const currentScrollY = window.scrollY;
-        
         const currentDetail = e.currentTarget.parentNode;
         const wasOpen = currentDetail.open;
         
-        // Always close all details first
-        details.forEach(detail => {
-          detail.open = false;
-        });
-        
-        // If the clicked detail was closed, open it
+        // Se a pergunta clicada estava fechada, feche todas as outras e abra ela
         if (!wasOpen) {
-          currentDetail.open = true;
+          details.forEach(detail => {
+            if (detail !== currentDetail) {
+              detail.open = false;
+            }
+          });
         }
-        
-        // Force scroll position to stay the same
-        requestAnimationFrame(() => {
-          window.scrollTo(0, currentScrollY);
-          // Double check after DOM updates
-          setTimeout(() => {
-            window.scrollTo(0, currentScrollY);
-          }, 50);
-        });
+        // Se estava aberta, deixe o comportamento padrão do browser (fechar)
       });
     });
   </script>
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- Gerenciadores de Leads e E-mail -->
+  <script src="./static/leads-manager.js"></script>
+  <script src="./static/email-manager.js"></script>
 </body>
 </html>
