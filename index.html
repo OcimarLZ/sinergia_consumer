@@ -35,6 +35,12 @@
   <main id="conteudo">
     <!-- Hero -->
     <section class="hero" id="hero">
+      <div class="video-background">
+          <video id="hero-video" autoplay loop muted playsinline poster="https://www.igreenenergy.com.br/wp-content/uploads/2023/11/bg-hero-igreen.png">
+              <source src="https://www.igreenenergy.com.br/wp-content/uploads/2023/11/video-hero.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos em HTML5.
+          </video>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Parceria oficial IGreen</span>
@@ -124,6 +130,32 @@
       </div>
     </section>
   
+   <!-- Por que existimos? -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <h2 class="section-title">POR QUE EXISTIMOS?</h2>
+      <p class="section-subtitle">Fomos criados para levar sustentabilidade, praticidade e economia através de fontes energéticas sustentáveis que transformam a vida das pessoas.</p>
+      <a href="#simulacao" class="btn btn-primary">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- Como funciona a conexão green -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <h2 class="section-title">COMO FUNCIONA A CONEXÃO GREEN</h2>
+      <div class="how-container-vertical">
+        <div class="how-item">
+          <img src="static/img/ConexaoGreen.png" alt="Conexão Green">
+        </div>
+        <div class="how-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/Ma8QN7x_d-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
    <!-- Seção FAQ -->
    <section class="faq-section" id="faq">
      <div class="container">
@@ -137,47 +169,236 @@
        </div>
        
        <nav class="faq-categories" aria-label="Categorias de perguntas">
-         <a href="#investimento" class="category-btn active">Investimento</a>
-         <a href="#eligibilidade" class="category-btn">Elegibilidade</a>
-         <a href="#como-funciona" class="category-btn">Como funciona</a>
-         <a href="#economia" class="category-btn">Economia</a>
-         <a href="#contrato" class="category-btn">Contrato</a>
-         <a href="#regulatorio" class="category-btn">Regulatório</a>
-         <a href="#regras" class="category-btn">Regras</a>
-         <a href="#distribuidoras" class="category-btn">Distribuidoras</a>
-         <a href="#cobertura" class="category-btn">Cobertura</a>
+         <button class="category-btn active" data-section="quem-somos">Quem somos?</button>
+         <button class="category-btn" data-section="investimento">Investimento</button>
+         <button class="category-btn" data-section="como-funciona">Como funciona</button>
+         <button class="category-btn" data-section="economia">Economia</button>
+         <button class="category-btn" data-section="legislação">Legislação</button>
+         <button class="category-btn" data-section="distribuidoras">Cobertura e Distribuidoras</button>
+         <button class="category-btn" data-section="adesao">Como Aderir</button>
        </nav>
      </div>
    </section>
     <!-- LISTA DE FAQ POR SEÇÃO -->
     <section class="faq-sections container">
 
-      <!-- INVESTIMENTO -->
-      <section id="investimento" class="faq-section" aria-labelledby="investimento-title">
-        <h2 id="investimento-title">Investimento</h2>
-
-        <details class="faq-item">
-          <summary>
-            Qual é o investimento que eu precisarei para fazer a portabilidade?
+      <!-- QUEM SOMOS -->
+      <section id="quem-somos" class="faq-section" aria-labelledby="quem-somos-title">
+        <details class="faq-item" open>
+          <summary id="quem-somos-title">
+            Quem Somos?
           </summary>
           <div class="answer">
-            Nenhum. Não há nenhum equipamento necessário para realizar a portabildiade.
-          </div>
-        </details>
+            <p>Somos um ecossistema de parceiros que une a força de gigantes da energia, especialistas em gestão e uma plataforma de tecnologia inovadora com o propósito de democratizar o acesso à energia limpa e mais barata para todos os brasileiros. Através do modelo de energia por assinatura, tornamos possível que residências e pequenas empresas economizem na conta de luz sem precisar de investimentos ou obras.</p>
+            <p>Cada parceiro desempenha um papel fundamental e complementar neste processo:</p>
+            
+            <h3><strong>Vibra Energia: </strong>A Gigante da Produção e Investimento</h3>
+            <p>A Vibra, uma das maiores empresas de energia do país e sucessora da BR Distribuidora, é a força motriz por trás da geração de energia.</p>
+            <p><strong>Papel Principal:</strong> Produtora e Investidora. A Vibra investe massivamente na construção e operação de grandes usinas de fontes renováveis, como as fazendas solares. Ela representa o capital, a infraestrutura e a robustez necessários para gerar a energia limpa em larga escala que abastece todo o ecossistema. Através de sua parceria estratégica com a Comerc, ela garante a base sólida para a produção de energia.</p>
+            <p><em>Em resumo, a Vibra é quem constrói e opera as grandes usinas que geram a energia limpa que você consome.</em></p>
 
-        <details class="faq-item">
-          <summary>
-            O processo de portabilidade terá custo?
-          </summary>
-          <div class="answer">
-            Não, o processo todo é feito on-line a partir do aplicativo Igreen e sem nenhum custo.
+            <h3><strong>Comerc: </strong>A Especialista em Geração e Gestão de Energia</h3>
+            <p>A Comerc é uma das mais renomadas especialistas em soluções de energia do Brasil. Enquanto também atua na geração (muitas vezes em parceria com a Vibra), seu grande diferencial é a inteligência e a gestão de todo o processo complexo.</p>
+            <p><strong>Papel Principal:</strong> Gestora e Estruturadora. A Comerc cuida de toda a parte técnica, regulatória e burocrática. Isso inclui:</p>
+            <ul class="dash">
+                <li>Gerenciar a produção das usinas para garantir eficiência.</li>
+                <li>Fazer a interface com a ANEEL e as distribuidoras locais.</li>
+                <li>Estruturar os consórcios e cooperativas que permitem a alocação dos créditos de energia.</li>
+                <li>Garantir que a energia gerada seja corretamente convertida em créditos e enviada para os consumidores.</li>
+            </ul>
+            <p><em>Em resumo, a Comerc é a arquiteta e administradora do projeto, garantindo que a energia gerada pela Vibra chegue legalmente e eficientemente como crédito na sua conta.</em></p>
+
+            <h3><strong>iGreen Energy: </strong>A Plataforma de Conexão e Comercialização</h3>
+            <p>A iGreen Energy não gera energia, mas é a ponte tecnológica e comercial que conecta as usinas ao consumidor final. Ela funciona como um grande marketplace de energia limpa.</p>
+            <p><strong>Papel Principal:</strong> Plataforma Comercial e de Relacionamento. A iGreen desenvolve a tecnologia e a rede de vendas para levar o serviço de assinatura ao mercado. Seu papel é:</p>
+            <ul class="dash">
+                <li>"Empacotar" a energia gerada pela Vibra/Comerc em um produto simples e acessível: a assinatura.</li>
+                <li>Criar e gerenciar a plataforma onde os clientes podem aderir, acompanhar seu consumo e seus descontos.</li>
+                <li>Habilitar e dar suporte à sua vasta rede de vendas, os Licenciados.</li>
+            </ul>
+            <p><em>Em resumo, a iGreen é a vitrine e o motor de vendas, transformando um produto complexo (energia) em um serviço simples de assinar.</em></p>
+
+            <h3><strong>Os Licenciados iGreen: </strong>A Força de Vendas e o Contato Humano</h3>
+            <p>Os Licenciados são empreendedores e consultores independentes que representam a marca iGreen em todo o Brasil. Eles são a ponta da lança do processo comercial.</p>
+            <p><strong>Papel Principal:</strong> Consultoria e Venda Direta. São eles que efetivamente realizam a "portabilidade":</p>
+            <ul class="dash">
+                <li>Apresentam os benefícios da energia por assinatura aos consumidores (residências e empresas).</li>
+                <li>Explicam como o serviço funciona e qual será a economia na conta de luz.</li>
+                <li>Realizam o cadastro do cliente na plataforma da iGreen, conectando-o a uma das usinas parceiras.</li>
+                <li>Atuam como o principal ponto de contato e suporte para o cliente durante o processo de adesão.</li>
+            </ul>
+            <p><em>Em resumo, os Licenciados são os consultores que levam a solução até você, entendem sua necessidade e viabilizam sua adesão ao serviço.</em></p>
+
+            <h3>Como Tudo se Conecta:</h3>
+            <p>Vibra e Comerc produzem e gerenciam a energia limpa.<br>
+            iGreen disponibiliza essa energia em sua plataforma digital de forma simplificada.<br>
+            Os Licenciados apresentam a solução ao consumidor e o ajudam a assinar o serviço.<br>
+            Você, o cliente, recebe os créditos na sua conta de luz e economiza, sem complicações.</p>
           </div>
         </details>
       </section>
 
-      <!-- ELEGIBILIDADE -->
-      <section id="eligibilidade" class="faq-section" aria-labelledby="eligibilidade-title">
-        <h2 id="eligibilidade-title">Elegibilidade</h2>
+      <!-- INVESTIMENTO -->
+      <section id="investimento" class="faq-section" aria-labelledby="investimento-title">
+        <details class="faq-item" open>
+          <summary id="investimento-title">
+            Investimento
+          </summary>
+          <div class="answer">
+            <p>A portabilidade de energia através da iGreen é uma solução que prioriza a simplicidade e acessibilidade para todos os consumidores brasileiros. Uma das principais vantagens do nosso serviço é a ausência de investimentos iniciais ou custos ocultos.</p>
+            
+            <h3><strong>Investimento Inicial: </strong>Zero Reais</h3>
+            <p>Não há nenhum investimento necessário para realizar a portabilidade de energia. Diferentemente da instalação de painéis solares ou outros sistemas de geração própria, nossa solução funciona através de alocação remota de créditos, eliminando completamente a necessidade de equipamentos em sua propriedade.</p>
+            
+            <h3><strong>Processo sem Custos: </strong>100% Digital e Gratuito</h3>
+            <p>Todo o processo de adesão é realizado de forma digital através do aplicativo iGreen, sem nenhum custo para o cliente. Não cobramos taxas de adesão, instalação ou ativação do serviço.</p>
+            
+            <h3><strong>O que está Incluído:</strong></h3>
+            <ul class="dash">
+                <li>Análise gratuita da sua fatura de energia</li>
+                <li>Simulação personalizada de economia</li>
+                <li>Processo de adesão 100% digital</li>
+                <li>Alocação de créditos de energia limpa</li>
+                <li>Suporte técnico e comercial</li>
+                <li>Monitoramento contínuo da sua economia</li>
+            </ul>
+            
+            <p><em>Em resumo, você começa a economizar na sua conta de luz sem investir um centavo, tornando a energia limpa acessível para todos os brasileiros.</em></p>
+          </div>
+        </details>
+      </section>
+
+      
+
+      <!-- COMO FUNCIONA -->
+      <section id="como-funciona" class="faq-section" aria-labelledby="como-funciona-title">
+        <details class="faq-item" open>
+          <summary id="como-funciona-title">
+            Como funciona
+          </summary>
+          <div class="answer">
+            <p>A portabilidade de energia da iGreen funciona através de um sistema inovador de alocação remota de créditos de energia limpa, sem necessidade de instalações ou obras em sua propriedade. Entenda como todo o processo funciona na prática:</p>
+            
+            <h3><strong>Créditos de Energia: </strong>O Coração do Sistema</h3>
+            <p>Os créditos de energia são kWh compensados na sua fatura decorrentes de geração em usinas parceiras (geração distribuída). Na conta da distribuidora, isso aparece como itens de compensação/crédito de energia, reduzindo a parcela de consumo compensável. Encargos fixos, impostos, taxa de serviço e iluminação pública continuam sendo cobrados pela distribuidora normalmente.</p>
+            
+            <h3><strong>Processo Simplificado: </strong>Sem Obras ou Equipamentos</h3>
+            <p>Na modalidade de créditos de energia via alocação remota, não há obra no seu endereço nem troca de medidor. A compensação ocorre administrativamente na fatura, mantendo toda a infraestrutura atual.</p>
+            
+            <h3><strong>Atendimento e Responsabilidades: </strong>Sua Distribuidora Continua Ativa</h3>
+            <p>A sua distribuidora continua responsável por operação e manutenção da rede e por todo o atendimento técnico (chamados, emergências, etc.). Para essas situações, o contato permanece sendo diretamente com a sua distribuidora. A IGreen realiza a alocação de créditos de energia, mas a sua distribuidora continua sendo a responsável pela rede, leitura e atendimento.</p>
+            
+            <h3><strong>Elegibilidade e Público-Alvo:</strong></h3>
+            <p>A portabilidade de energia elétrica da Sinergia, em parceria com a IGreen, oferece soluções tanto para consumidores de baixa tensão (Grupo B) quanto para os de alta demanda (Grupo A):</p>
+            <ul class="dash">
+                <li><strong>Grupo B:</strong> Consumidores residenciais e comerciais com até 8.000 kWh/mês</li>
+                <li><strong>Grupo A:</strong> Empresas de alta demanda com processo customizado</li>
+                <li><strong>Múltiplas unidades:</strong> Otimização para conjunto de unidades do mesmo CPF/CNPJ</li>
+                <li><strong>Portabilidade de créditos:</strong> Possível mudança de endereço na mesma área de concessão</li>
+            </ul>
+            
+            <h3><strong>Documentação Necessária:</strong></h3>
+            <p><strong>Para Pessoa Física (CPF):</strong> Fatura atualizada e documento com foto.</p>
+            <p><strong>Para Pessoa Jurídica (CNPJ):</strong> Cartão CNPJ, fatura atualizada, documento com foto do administrador e Contrato Social/QSA/ATA (se necessário).</p>
+            
+            <h3><strong>Restrições Importantes:</strong></h3>
+            <ul class="dash">
+                <li>Contratos em nome de titulares falecidos são negados</li>
+                <li>Não atendemos clientes baixa renda</li>
+                <li>Não atendemos energia reativa</li>
+                <li>Não atendemos clientes Grupo A* (algumas exceções)</li>
+                <li>Não atendemos clientes com classificação de tarifa branca</li>
+                <li>Somente o titular da conta pode assinar o contrato</li>
+                <li>Prazo de cancelamento: média de 90 a 120 dias para todas as distribuidoras</li>
+            </ul>
+            
+            <p><em>Em resumo, é um processo 100% digital e administrativo que traz energia limpa para sua casa sem complicações técnicas ou burocráticas, mantendo toda a segurança e confiabilidade do sistema elétrico atual.</em></p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            O que é “crédito de energia” e como ele aparece na conta?
+          </summary>
+          <div class="answer">
+            <p>São kWh compensados na sua fatura decorrentes de geração em usina parceira (geração distribuída). Na conta da distribuidora, isso aparece como itens de compensação/crédito de energia, reduzindo a parcela de consumo compensável. Encargos fixos, impostos, taxa de serviço e iluminação pública continuam sendo cobrados pela distribuidora normalmente.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Preciso trocar medidor ou fazer obra no meu endereço?
+          </summary>
+          <div class="answer">
+            <p>Não. Na modalidade de créditos de energia via alocação remota, não há obra no seu endereço nem troca de medidor. A compensação ocorre administrativamente na fatura.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Quem atende falta de luz, queda de fase ou problemas técnicos?
+          </summary>
+          <div class="answer">
+            <p>A sua distribuidora continua responsável por operação e manutenção da rede e por todo o atendimento técnico (chamados, emergências, etc.). Para essas situações, o contato permanece sendo diretamente com a sua distribuidora.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            Quais são as principais restrições para contratação?
+          </summary>
+          <div class="answer">
+            <p>Existem algumas restrições importantes para a contratação dos nossos serviços:</p>
+            <ul class="dash">
+              <li>Contratos em nome de titulares falecidos são negados</li>
+              <li>Não atendemos clientes baixa renda</li>
+              <li>Não atendemos energia reativa</li>
+              <li>Não atendemos clientes Grupo A*</li>
+              <li>Proibido o licenciado assinar pelo cliente</li>
+              <li>Não atendemos clientes com classificação de tarifa branca</li>
+              <li>Aceitamos clientes CPF e CNPJ em todos os estados</li>
+              <li>Prazo de cancelamento: média de 90 a 120 dias para todas as distribuidoras</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Qual documentação é necessária para contratação?
+          </summary>
+          <div class="answer">
+            <p>Para pessoa física (CPF):</p>
+            <ul class="dash">
+              <li>Fatura atualizada</li>
+              <li>Documento com foto</li>
+            </ul>
+            
+            <p>Para pessoa jurídica (CNPJ):</p>
+            <ul class="dash">
+              <li>Cartão CNPJ</li>
+              <li>Fatura atualizada</li>
+              <li>Documento com foto do administrador</li>
+              <li>Contrato Social, QSA ou ATA (se necessário)</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como funciona o envio de boletos?
+          </summary>
+          <div class="answer">
+            <p>Os boletos são enviados pela iGreen e pelas fornecedoras, conforme o procedimento estabelecido com cada fornecedora.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Posso portar os créditos se eu mudar de endereço?
+          </summary>
+          <div class="answer">
+            <p>Possível, desde que a nova unidade esteja na mesma área de concessão e atenda aos critérios de elegibilidade. Faremos uma nova análise para realocar os créditos.</p>
+          </div>
+        </details>
 
         <details class="faq-item">
           <summary>
@@ -211,7 +432,7 @@
             Preciso ser cliente exclusivo da IGreen?
           </summary>
           <div class="answer">
-            Não. A IGreen realiza a alocação de créditos de energia, mas a sua distribuidora continua sendo a responsável pela rede, leitura e atendimento.
+            <p>Não. A IGreen realiza a alocação de créditos de energia, mas a sua distribuidora continua sendo a responsável pela rede, leitura e atendimento.</p>
           </div>
         </details>
 
@@ -220,68 +441,33 @@
             Posso participar se tiver mais de uma unidade consumidora?
           </summary>
           <div class="answer">
-            Sim. Avaliamos o conjunto de unidades (mesmo CPF/CNPJ) para otimizar a alocação de créditos, respeitando as regras da distribuidora e o limite contratado.
-          </div>
-        </details>
-      </section>
-
-      <!-- COMO FUNCIONA -->
-      <section id="como-funciona" class="faq-section" aria-labelledby="como-funciona-title">
-        <h2 id="como-funciona-title">Como funciona</h2>
-
-        <details class="faq-item">
-          <summary>
-            O que é “crédito de energia” e como ele aparece na conta?
-          </summary>
-          <div class="answer">
-            São kWh compensados na sua fatura decorrentes de geração em usina parceira (geração distribuída). Na conta da distribuidora, isso aparece como itens de compensação/crédito de energia, reduzindo a parcela de consumo compensável. Encargos fixos, impostos, taxa de serviço e iluminação pública continuam sendo cobrados pela distribuidora normalmente.
+            <p>Sim. Avaliamos o conjunto de unidades (mesmo CPF/CNPJ) para otimizar a alocação de créditos, respeitando as regras da distribuidora e o limite contratado.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>
-            Preciso trocar medidor ou fazer obra no meu endereço?
+            Não sou titular da conta, posso ter o desconto?
           </summary>
           <div class="answer">
-            Não. Na modalidade de créditos de energia via alocação remota, não há obra no seu endereço nem troca de medidor. A compensação ocorre administrativamente na fatura.
+            <p>O contrato deve ser realizado exclusivamente com os dados do titular da conta de energia, pois somente ele possui autorização legal para aderir ao benefício e validar as informações cadastrais.</p>
+            <p>Nenhuma outra pessoa — mesmo sendo da mesma família ou residindo no imóvel — possui autonomia para assinar ou finalizar o processo em nome do titular.</p>
           </div>
         </details>
-
-        <details class="faq-item">
-          <summary>
-            Quem atende falta de luz, queda de fase ou problemas técnicos?
-          </summary>
-          <div class="answer">
-            A sua distribuidora continua responsável por operação e manutenção da rede e por todo o atendimento técnico (chamados, emergências, etc.). Para essas situações, o contato permanece sendo diretamente com a sua distribuidora.
-          </div>
-        </details>
-      </section>
-
-      <!-- ECONOMIA E FATURAMENTO -->
-      <section id="economia" class="faq-section" aria-labelledby="economia-title">
-        <h2 id="economia-title">Economia e faturamento</h2>
-
-        <details class="faq-item">
-          <summary>
-            Qual é a economia típica e do que ela depende?
-          </summary>
-          <div class="answer">
-            A economia estimada decorre do desconto aplicado sobre os créditos de energia contratados e do seu perfil de consumo. O percentual efetivo pode variar por sazonalidade, tributos e regras da distribuidora. Não reduz encargos fixos, taxas e iluminação pública.
-          </div>
-        </details>
-
         <details class="faq-item">
           <summary>
             Vou continuar recebendo fatura da minha distribuidora?
           </summary>
           <div class="answer">
-            Isto depende do convênio entre Igreen e sua distribuidora. Há casos onde serão enviados duas faturas e outros casos onde a fatura será concentrada tudo na conta da Igreen, ficando esta responsável pela transferência dos valores correspondentes à distribuidora.
-            No caso de haver duas faturas, a fatura da distribuidora contemplará os seguintes valores:
-            - impostos e encargos regulatórios;
-            - taxa de serviço;
-            - iluminação pública;
-            - eventuais diferenças não compensadas.
-            Os créditos aplicados reduzem o consumo compensável. Em paralelo, você recebe a cobrança dos créditos contratados conforme seu acordo com a IGreen.
+            <p>Isto depende do convênio entre Igreen e sua distribuidora. Há casos onde serão enviados duas faturas e outros casos onde a fatura será concentrada tudo na conta da Igreen, ficando esta responsável pela transferência dos valores correspondentes à distribuidora.</p>
+            <p>No caso de haver duas faturas, a fatura da distribuidora contemplará os seguintes valores:</p>
+            <ul class="dash">
+              <li>impostos e encargos regulatórios;</li>
+              <li>taxa de serviço;</li>
+              <li>iluminação pública;</li>
+              <li>eventuais diferenças não compensadas.</li>
+            </ul>
+            <p>Os créditos aplicados reduzem o consumo compensável. Em paralelo, você recebe a cobrança dos créditos contratados conforme seu acordo com a IGreen.</p>
           </div>
         </details>
 
@@ -290,7 +476,7 @@
             Como ficam sobras ou déficits de créditos mês a mês?
           </summary>
           <div class="answer">
-            Se houver mais créditos do que consumo compensável, as sobras seguem as regras vigentes da compensação (podem ser acumuladas por um período e/ou readequadas). Se faltar crédito, a diferença é faturada pela distribuidora conforme a sua tarifa.
+            <p>Se houver mais créditos do que consumo compensável, as sobras seguem as regras vigentes da compensação (podem ser acumuladas por um período e/ou readequadas). Se faltar crédito, a diferença é faturada pela distribuidora conforme a sua tarifa.</p>
           </div>
         </details>
 
@@ -299,21 +485,15 @@
             Posso manter débito automático / PIX / boleto?
           </summary>
           <div class="answer">
-            Sim, você segue com as formas de pagamento habituais da sua distribuidora. A cobrança relativa aos créditos pode ser feita separadamente, conforme combinado no seu contrato com a IGreen.
+            <p>Sim, você segue com as formas de pagamento habituais da sua distribuidora. A cobrança relativa aos créditos pode ser feita separadamente, conforme combinado no seu contrato com a IGreen.</p>
           </div>
         </details>
-      </section>
-
-      <!-- CONTRATO E CANCELAMENTO -->
-      <section id="contrato" class="faq-section" aria-labelledby="contrato-title">
-        <h2 id="contrato-title">Contrato e cancelamento</h2>
-
         <details class="faq-item">
           <summary>
             Existe fidelidade ou multa de cancelamento?
           </summary>
           <div class="answer">
-            A proposta da IGreen privilegia simplicidade e baixa burocracia. Não trabalhamos com amarras indevidas; o cancelamento pode ser solicitado com aviso prévio, respeitando prazos operacionais da alocação de créditos. Condições específicas constam do seu contrato.
+            <p>A proposta da IGreen privilegia simplicidade e baixa burocracia. Não trabalhamos com amarras indevidas; o cancelamento pode ser solicitado com aviso prévio, respeitando prazos operacionais da alocação de créditos. Condições específicas constam do seu contrato.</p>
           </div>
         </details>
 
@@ -322,23 +502,175 @@
             Como faço para cancelar?
           </summary>
           <div class="answer">
-            Solicite pelo nosso WhatsApp oficial ou canal de atendimento. Realizamos a desativação da alocação e você segue normalmente com a sua distribuidora, sem interrupção de fornecimento.
+            <p>Solicite pelo nosso WhatsApp oficial ou canal de atendimento. Realizamos a desativação da alocação e você segue normalmente com a sua distribuidora, sem interrupção de fornecimento.</p>
           </div>
         </details>
-      </section>
-
-      <!-- REGULATÓRIO E SEGURANÇA -->
-      <section id="regulatorio" class="faq-section" aria-labelledby="regulatorio-title">
-        <h2 id="regulatorio-title">Regulatório e segurança</h2>
 
         <details class="faq-item">
           <summary>
-            É regulamentado? Qual a base legal da compensação de energia?
+            Posso alterar a data de vencimento do boleto iGreen?
           </summary>
           <div class="answer">
-            A compensação de energia no Brasil foi estabelecida por normas da ANEEL e, atualmente, está consolidada no Marco Legal da Geração Distribuída (Lei 14.300/2022) e regulamentações associadas. A alocação de créditos segue essas diretrizes e os procedimentos da distribuidora.
+            <p>Caso o seu método de pagamento seja por boleto único, a data de vencimento pode ser alterada a cada 12 meses. Lembrando que o boleto unificado da iGreen terá como padrão de vencimento uma data fixada para 5 dias antes do vencimento do boleto da distribuidora.</p>
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary>
+            O desconto se aplica a essas taxas?
+          </summary>
+          <div class="answer">
+            O desconto não se aplica a taxas obrigatórias (PIS, COFINS E ICMS). O desconto é aplicado sobre o consumo mensal de energia solar. 
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como solicitar a segunda via do boleto?
+          </summary>
+          <div class="answer">
+            Se o seu boleto não estiver disponível, isso pode ser devido a:
+            Problemas técnicos: Atraso no processamento ou falhas bancárias.
+            Boleto vencido: O sistema pode removê-lo após o vencimento.
+            Formas de solicitar a segunda via:
+            É possível solicitar a segunda via do boleto no app iGreen Club,  pelo portal do cliente ou pode solicitar em nosso Suporte via whatsapp. 
+            Aplicativo iGreen Club: Acesse a aba "Faturas".
+            <ul class="dash">
+              <li>Android: [Baixar <a href="https://play.google.com/store/apps/details?id=com.embarcadero.iGreenConnect&hl=en target="_blank" rel="noopener">aqui]</li>
+              <li>iOS: [Baixar <a href="https://apps.apple.com/br/app/igreen-club/id6444493340" target="_blank" rel="noopener">aqui]</li>
+            </ul>
+            Portal do Cliente: Acesse <a href="https://portal.igreenenergy.com.br/" target="_blank" rel="noopener">este link</a>.
+            <br>
+            WhatsApp: (34) 99727-8247
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            O desconto se aplica a essas taxas?
+          </summary>
+          <div class="answer">
+            O desconto não se aplica a taxas obrigatórias (PIS, COFINS E ICMS). O desconto é aplicado sobre o consumo mensal de energia solar. 
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como solicitar a segunda via do boleto?
+          </summary>
+          <div class="answer">
+            Se o seu boleto não estiver disponível, isso pode ser devido a:
+            <br><br>
+            Problemas técnicos: Atraso no processamento ou falhas bancárias.
+            <br>
+            Boleto vencido: O sistema pode removê-lo após o vencimento.
+            <br><br>
+            Formas de solicitar a segunda via:
+            <br>
+            É possível solicitar a segunda via do boleto no app iGreen Club,  pelo portal do cliente ou pode solicitar em nosso Suporte via whatsapp. 
+            <br><br>
+            Aplicativo iGreen Club: Acesse a aba "Faturas".
+            <ul class="dash">
+              <li>Android: [Baixar aqui]</li>
+              <li>iOS: [Baixar aqui]</li>
+            </ul>
+            Portal do Cliente: Acesse <a href="https://portal.igreenenergy.com.br/" target="_blank" rel="noopener">este link</a>.
+            <br>
+            WhatsApp: (34) 99727-8247
+          </div>
+        </details>
+
+        
+      </section>
+
+      <!-- ECONOMIA E FATURAMENTO -->
+      <section id="economia" class="faq-section" aria-labelledby="economia-title">
+        <details class="faq-item" open>
+          <summary>Economize ainda mais: Entenda Nosso Programa de Indicação e Cashback</summary>
+          <div class="answer">
+            <h3>Economia e Desconto</h3>
+            <p>A economia estimada decorre do desconto aplicado sobre os créditos de energia contratados e do seu perfil de consumo. O percentual efetivo pode variar por sazonalidade, tributos e regras da distribuidora. Não reduz encargos fixos, taxas e iluminação pública.</p>
+            
+            <p>Seu boleto iGreen exibe um campo indicando o valor que você pagaria caso não tivesse contratado nossos serviços. Além disso, no histórico da fatura iGreen consegue visualizar a economia que teve nos meses anteriores, conseguindo somar o desconto que teve em todo o período que está conosco.</p>
+            
+            <p>Sem contar que ao contratar a iGreen, você garante:</p>
+            <ul class="dash">
+              <li>Economia: Redução na conta de luz e descontos em estabelecimentos parceiros</li>
+              <li>Sustentabilidade: Uso de energia limpa e renovável</li>
+            </ul>
+            
+            <h3>Programa de Cashback</h3>
+            <p>Nosso cashback é, na verdade, uma recompensa financeira que você recebe por indicar novos clientes para o nosso serviço de energia por assinatura. Em vez de ser um retorno sobre o seu próprio gasto, é uma comissão que pagamos a você por nos ajudar a crescer.</p>
+            
+            <h3>Como Funciona o Cashback</h3>
+            <p>É simples:</p>
+            <ul class="dash">
+              <li>Ao se tornar nosso cliente, você recebe um link de indicação exclusivo</li>
+              <li>Você compartilha esse link com amigos, familiares e contatos</li>
+              <li>Quando alguém usa o seu link para aderir ao nosso serviço, nós pagamos a você uma comissão por essa nova adesão</li>
+            </ul>
+            
+            <p>Para simplificar, aplicamos o valor da sua comissão como um crédito adicional diretamente na sua fatura de energia por assinatura. Isso significa que, no próximo mês, seu boleto virá com um desconto ainda maior, podendo até chegar a zero!</p>
+            
+            <h3>Participação no Programa</h3>
+            <p>De forma alguma você precisa ser um vendedor! Você só precisa ser nosso cliente e estar satisfeito com a economia que está tendo. O programa é uma forma de recompensar você por compartilhar sua experiência positiva. Você indica quando e para quem quiser.</p>
+            
+            <h3>Diferenças do Cashback Tradicional</h3>
+            <p>A diferença é a origem do dinheiro:</p>
+            <ul class="dash">
+              <li><strong>Cashback de Cartão:</strong> Devolve uma parte do dinheiro que você gastou em uma compra</li>
+              <li><strong>Cashback iGreen:</strong> É uma comissão paga pela nova receita que você gerou ao trazer um novo cliente para nós</li>
+            </ul>
+            
+            <p>Acreditamos que a melhor propaganda é feita por clientes satisfeitos. Este programa nos permite crescer através da confiança e da prova social (a famosa "indicação boca a boca"), enquanto recompensamos nossos clientes mais leais por nos ajudarem a levar energia limpa e mais barata para mais pessoas.</p>
+            
+            <p>Geralmente não há limites! Quanto mais pessoas você indicar e se tornarem clientes, mais comissões você pode acumular e maior será o seu desconto na fatura. É uma relação onde todos ganham: você economiza mais, seus amigos economizam, e juntos ajudamos o planeta. 🌎💚</p>
+          </div>
+        </details>
+
+
+
+
+      </section>
+
+      
+
+      <!-- REGULATÓRIO E SEGURANÇA -->
+      <section id="legislação" class="faq-section" aria-labelledby="regulatorio-title">
+        <details class="faq-item" open>
+          <summary>Legislação da Portabilidade</summary>
+          <div class="answer">
+            <h3>Base Legal e Regulamentação</h3>
+            <p>O serviço de energia por assinatura funciona graças ao sistema de compensação de créditos, hoje consolidado pelo Marco Legal da Geração Distribuída (Lei 14.300/2022). Na prática, a energia gerada remotamente em usinas parceiras é convertida em créditos que a distribuidora local, seguindo as diretrizes da lei, aplica diretamente na sua conta de luz para gerar o desconto contratado.</p>
+            
+            <h3>Como Funciona a Portabilidade (Geração Compartilhada)</h3>
+            <p>Pense nisso como "alugar uma fatia" de uma grande fazenda solar ou de outra fonte renovável. O processo é o seguinte:</p>
+            <ul class="dash">
+              <li><strong>A Empresa Constrói a Usina:</strong> Uma empresa como a Comerc, Vibra, ou parceiros da iGreen constrói uma grande usina de geração de energia (geralmente solar ☀️) em um local favorável</li>
+              <li><strong>Você "Assina":</strong> Você, consumidor, não precisa instalar painéis solares em casa. Em vez disso, você adere a um consórcio ou cooperativa (gerenciado pela empresa) e "aluga" uma cota dessa usina, proporcional ao seu consumo médio de energia</li>
+              <li><strong>Geração e Injeção dos Créditos:</strong> A usina gera energia e a injeta na rede da sua distribuidora local (Enel, CPFL, Light, etc.)</li>
+              <li><strong>Compensação na Sua Conta:</strong> A distribuidora local identifica que a sua unidade consumidora (seu CPF/CNPJ) tem direito a uma parte daquela energia gerada. Ela converte essa energia em créditos e os aplica diretamente na sua conta de luz, abatendo a maior parte do valor referente ao consumo</li>
+              <li><strong>Pagamento:</strong> No final do mês, você paga um boleto para a empresa (iGreen, Comerc, etc.) pela "assinatura" da sua cota de energia, que já vem com um desconto garantido (ex: 10% a 20% mais barato que a tarifa normal), e um valor mínimo para a distribuidora local, referente à taxa de iluminação pública, taxa de disponibilidade e, para novos projetos, o custo da TUSD Fio B</li>
+            </ul>
+            
+            <h3>Papel da Lei 14.300/2022</h3>
+            <p>A Lei 14.300 foi o catalisador que deu a segurança que essas grandes empresas precisavam para investir bilhões de reais nesse modelo de negócio:</p>
+            <ul class="dash">
+              <li><strong>Segurança Jurídica:</strong> Antes da lei, a Geração Compartilhada era baseada apenas em resoluções da ANEEL. A Lei 14.300 transformou essas regras em lei federal, dando estabilidade e previsibilidade para que empresas pudessem planejar e construir usinas de grande porte</li>
+              <li><strong>Benefício do Direito Adquirido:</strong> A maioria das usinas oferecidas hoje foram protocoladas antes de 7 de janeiro de 2023, operando sob as regras antigas (compensação 1 para 1, sem a "taxação do sol") até 2045. Ao "assinar" a energia de uma dessas usinas, você "herda" esse benefício</li>
+              <li><strong>Regulamentação Clara dos Papéis:</strong> A lei definiu claramente as responsabilidades de cada um: da distribuidora, do gerador e dos consumidores participantes do consórcio</li>
+            </ul>
+            
+            <h3>Concorrência e Diferencial</h3>
+            <p>Não somos a única empresa que oferece alocação de créditos de energia. Nosso diferencial é a clareza do contrato, transparência na economia e suporte contínuo, mantendo a distribuidora como seu canal de atendimento técnico e cobrança dos encargos regulatórios.</p>
+            
+            <h3>Tarifas e Taxas Obrigatórias</h3>
+            <p>As tarifas obrigatórias (ICMS, PIS e COFINS) são estipuladas pelo Governo Estadual e definem a tributação sobre o consumo de energia. Essa tributação não muda se a energia é elétrica ou solar, independente de sua escolha energética, elas aparecerão no boleto da distribuidora.</p>
+            
+            <p><strong>Importante:</strong> O desconto não se aplica a taxas obrigatórias (PIS, COFINS E ICMS). O desconto é aplicado sobre o consumo mensal de energia solar.</p>
+          </div>
+        </details>
+
+
 
         <details class="faq-item">
           <summary>
@@ -348,95 +680,44 @@
             Não. Existem outras empresas que oferecem alocação de créditos de energia. Nosso diferencial é a clareza do contrato, transparência na economia e suporte contínuo, mantendo a distribuidora como seu canal de atendimento técnico e cobrança dos encargos regulatórios.
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary>
+            O que são as tarifas ou taxas obrigatórias ICMS, PIS E COFINS?
+          </summary>
+          <div class="answer">
+            As tarifas obrigatórias são estipuladas pelo Governo Estadual e definem a tributação sobre o consumo de energia. 
+            <br><br>
+            Essa tributação não muda se a energia é elétrica ou solar, independente de sua escolha energética, elas aparecerão no boleto da distribuidora.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            O desconto se aplica a essas taxas?
+          </summary>
+          <div class="answer">
+            O desconto não se aplica a taxas obrigatórias (PIS, COFINS E ICMS). O desconto é aplicado sobre o consumo mensal de energia solar. 
+          </div>
+        </details>
+
       </section>
 
-      <!-- COBERTURA -->
-      <section id="cobertura" class="faq-section" aria-labelledby="cobertura-title">
-        <h2 id="cobertura-title">Cobertura e distribuidoras</h2>
-
-        <details class="faq-item">
-          <summary>
-            Atendem apenas a área da Celesc?
-          </summary>
-          <div class="answer">
-            Nosso foco atual é a área de concessão da Celesc. Outras distribuidoras podem ser atendidas conforme a disponibilidade de créditos e regras locais. Envie seu CEP e uma fatura recente para verificarmos a viabilidade.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Posso portar os créditos se eu mudar de endereço?
-          </summary>
-          <div class="answer">
-            Possível, desde que a nova unidade esteja na mesma área de concessão e atenda aos critérios de elegibilidade. Faremos uma nova análise para realocar os créditos.
-          </div>
-        </details>
-      </section>
-
-      <!-- REGRAS E RESTRIÇÕES -->
-      <section id="regras" class="faq-section" aria-labelledby="regras-title">
-        <h2 id="regras-title">Regras e restrições</h2>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as principais restrições para contratação?
-          </summary>
-          <div class="answer">
-            Existem algumas restrições importantes para a contratação dos nossos serviços:
-            <ul class="dash">
-              <li>Contratos em nome de titulares falecidos são negados</li>
-              <li>Não atendemos clientes baixa renda</li>
-              <li>Não atendemos energia reativa</li>
-              <li>Não atendemos clientes Grupo A*</li>
-              <li>Proibido o licenciado assinar pelo cliente</li>
-              <li>Não atendemos clientes com classificação de tarifa branca</li>
-              <li>Aceitamos clientes CPF e CNPJ em todos os estados</li>
-              <li>Prazo de cancelamento: média de 90 a 120 dias para todas as distribuidoras</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Qual documentação é necessária para contratação?
-          </summary>
-          <div class="answer">
-            Para pessoa física (CPF):
-            <ul class="dash">
-              <li>Fatura atualizada</li>
-              <li>Documento com foto</li>
-            </ul>
-            
-            Para pessoa jurídica (CNPJ):
-            <ul class="dash">
-              <li>Cartão CNPJ</li>
-              <li>Fatura atualizada</li>
-              <li>Documento com foto do administrador</li>
-              <li>Contrato Social, QSA ou ATA (se necessário)</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Como funciona o envio de boletos?
-          </summary>
-          <div class="answer">
-            Os boletos são enviados pela iGreen e pelas fornecedoras, conforme o procedimento estabelecido com cada fornecedora.
-          </div>
-        </details>
-      </section>
+      
 
       <!-- DISTRIBUIDORAS -->
       <section id="distribuidoras" class="faq-section" aria-labelledby="distribuidoras-title">
-        <h2 id="distribuidoras-title">Informações por distribuidora</h2>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Alagoas (Equatorial)?
-          </summary>
+        <details class="faq-item" open>
+          <summary id="distribuidoras-title">Informações da cobertura por estado e distribuidora</summary>
           <div class="answer">
-            <p>Para a Equatorial em Alagoas:</p>
+            <p>Veja a tabela atualizada no site da IGreen <a href="https://www.igreenenergy.com.br/regras-dos-estados-conexao-green" target="_blank" rel="noopener">clicando aqui</a>.</p>
+            
+            <h3>🌎 Cobertura Nacional</h3>
+            <p>A IGreen atende diversos estados brasileiros através de parcerias com as principais distribuidoras de energia. Cada região possui condições específicas de consumo mínimo, formas de pagamento e descontos disponíveis.</p>
+            
+            <h3>📋 Condições por Estado e Distribuidora</h3>
+            
+            <h4>Alagoas (Equatorial)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
@@ -444,34 +725,20 @@
               <li>Desconto padrão: 10% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
               <li>Troca de Titularidade: Sim</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para a Bahia (Coelba)?
-          </summary>
-          <div class="answer">
-            <p>Para a Coelba na Bahia:</p>
+            
+            <h4>Bahia (Coelba)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Dois Boletos</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
+              <li><strong>Observações:</strong> Aceitamos clientes com placas, não é necessário informar login e senha da distribuidora.</li>
             </ul>
-            <p><strong>Observações:</strong> Aceitamos clientes com placas, não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Ceará (ENEL)?
-          </summary>
-          <div class="answer">
-            <p>Para a ENEL no Ceará:</p>
+            
+            <h4>Ceará (ENEL)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
@@ -479,53 +746,30 @@
               <li>Desconto padrão: 10% (Bônus A)</li>
               <li>Descontos opcionais: 14% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 18% (Bônus C) e 20% (Bônus D)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Espírito Santo (EDP)?
-          </summary>
-          <div class="answer">
-            Para a EDP no Espírito Santo:
+            
+            <h4>Espírito Santo (EDP)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 150 kWh</li>
               <li>Forma de pagamento: Unificado</li>
               <li>Prazo de injeção: 120 dias</li>
               <li>Desconto padrão: 10% (Bônus B)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</li>
             </ul>
             
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Goiás (Equatorial)?
-          </summary>
-          <div class="answer">
-            Para a Equatorial em Goiás:
+            <h4>Goiás (Equatorial)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 10% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>14% (Bônus B)</li>
+              <li>Descontos opcionais: 14% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 18% (Bônus C) e 20% (Bônus D)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Maranhão (Equatorial)?
-          </summary>
-          <div class="answer">
-            <p>Para a Equatorial no Maranhão:</p>
+            
+            <h4>Maranhão (Equatorial)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
@@ -533,54 +777,31 @@
               <li>Troca de Titularidade: Sim</li>
               <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-                <details class="faq-item">
-          <summary>
-            Quais são as condições para o Mato Grosso (Energisa)?
-          </summary>
-          <div class="answer">
-            Para a Energisa no Mato Grosso:
+            
+            <h4>Mato Grosso (Energisa)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 10% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>14% (Bônus B)</li>
+              <li>Descontos opcionais: 14% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 18% (Bônus C) e 20% (Bônus D)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. Desconto de 20% válido até 31/07/2025.</li>
             </ul>
             
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. Desconto de 20% válido até 31/07/2025.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Mato Grosso do Sul (ELEKTRO)?
-          </summary>
-          <div class="answer" style="margin-top: -5px;">
-            <p style="margin-bottom: 0;">Para a ELEKTRO no Mato Grosso do Sul:</p>
-            <ul class="dash extra-compact">
+            <h4>Mato Grosso do Sul (ELEKTRO)</h4>
+            <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Dois Boletos</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 10% (Bônus B)</li>
-              <li>Descontos opcionais disponíveis para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
+              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
+              <li><strong>Observações:</strong> Login e senha da distribuidora necessário. ICMS abaixo de 17% não é permitido. Aceito apenas os municípios Anaurilândia, Brasilândia, Figueirão, Santa Rita do Pardo, Selvíria, Três Lagoas.</li>
             </ul>
-            <p style="margin-top: 2px;"><strong>Observações:</strong> Login e senha da distribuidora necessário. ICMS abaixo de 17% não é permitido. Aceito apenas os municípios Anaurilândia, Brasilândia, Figueirão, Santa Rita do Pardo, Selvíria, Três Lagoas.</p>
-          </div>
-        </details>
-        
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Mato Grosso do Sul (Energisa)?
-          </summary>
-          <div class="answer">
-            <p>Para a Energisa no Mato Grosso do Sul:</p>
+            
+            <h4>Mato Grosso do Sul (Energisa)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Dois Boletos</li>
@@ -590,56 +811,32 @@
               <li>Para consumo de 1.000 a 5.000 kWh: 16% ou 20% (Bônus B)</li>
               <li>Para consumo de 5.000 a 10.000 kWh: 24% (Bônus C)</li>
               <li>Para consumo acima de 10.000 kWh: 28% (Bônus D)</li>
+              <li><strong>Observações:</strong> Clientes com placas podem aderir, não é necessário informar login e senha da distribuidora.</li>
             </ul>
-            <p><strong>Observações:</strong> Clientes com placas podem aderir, não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Minas Gerais (CEMIG)?
-          </summary>
-          <div class="answer">
-            Para a CEMIG em Minas Gerais:
+            
+            <h4>Minas Gerais (CEMIG)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado ou dois boletos</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 10% (Bônus A) para consumo de 100 kWh</li>
-              <li>Descontos opcionais disponíveis conforme consumo</li>
               <li>Para consumo de 1.000 a 5.000 kWh: até 20% (Bônus B)</li>
               <li>Para consumo de 5.000 a 10.000 kWh: até 24% (Bônus C)</li>
               <li>Para consumo acima de 10.000 kWh: até 28% (Bônus D)</li>
+              <li><strong>Observações:</strong> Atendemos órgãos públicos, clientes com placas, grupo A, classificação irrigação noturna e atendemos clientes com ICMS. Não é necessário informar login e senha da distribuidora.</li>
             </ul>
             
-            <p><strong>Observações:</strong> Atendemos órgãos públicos, clientes com placas, grupo A, classificação irrigação noturna e atendemos clientes com ICMS. Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Minas Gerais (Energisa Minas-Rio)?
-          </summary>
-          <div class="answer">
-            Para a Energisa Minas-Rio:
+            <h4>Minas Gerais (Energisa Minas-Rio)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 150 kWh</li>
               <li>Forma de pagamento: Unificado</li>
               <li>Prazo de injeção: 90 dias</li>
               <li>Desconto padrão: 10% (Bônus A) para consumo de 150 kWh</li>
-              <li>Descontos opcionais disponíveis para consumo acima de 1.000 kWh: até 20% (Bônus D)</li>
+              <li>Para consumo acima de 1.000 kWh: até 20% (Bônus D)</li>
+              <li><strong>Observações:</strong> Somente contas de MG, atendemos clientes com placas, grupo A e clientes que compensam ICMS. Não é necessário informar login e senha da distribuidora.</li>
             </ul>
             
-            <p><strong>Observações:</strong> Somente contas de MG, atendemos clientes com placas, grupo A e clientes que compensam ICMS. Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Pará (Equatorial)?
-          </summary>
-          <div class="answer">
-            <p>Para a Equatorial no Pará:</p>
+            <h4>Pará (Equatorial)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
@@ -647,17 +844,10 @@
               <li>Troca de Titularidade: Sim</li>
               <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para a Paraíba (Energisa)?
-          </summary>
-          <div class="answer">
-            <p>Para a Energisa na Paraíba:</p>
+            
+            <h4>Paraíba (Energisa)</h4>
             <ul class="dash">
               <li>Consumo mínimo: 100 kWh</li>
               <li>Forma de pagamento: Unificado</li>
@@ -665,282 +855,17 @@
               <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
               <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
               <li>Troca de Titularidade: Sim</li>
+              <li><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora.</li>
             </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora.</p>
           </div>
         </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Paraná (Copel)?
-          </summary>
-          <div class="answer">
-            Para a Copel no Paraná:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 5% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>8% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 10% (Bônus C) e 12% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Pernambuco (Neonergia)?
-          </summary>
-          <div class="answer">
-            <p>Para a Neonergia em Pernambuco:</p>
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Dois Boletos</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
-            </ul>
-            <p><strong>Observações:</strong> Placas não permitido; sem débitos, não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Piauí (Equatorial)?
-          </summary>
-          <div class="answer">
-            <p>Para a Equatorial no Piauí:</p>
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Análise de Crédito: Sim</li>
-              <li>Troca de Titularidade: Sim</li>
-              <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
-            </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio de Janeiro (Enel)?
-          </summary>
-          <div class="answer">
-            Para a Enel no Rio de Janeiro:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 8% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio de Janeiro (Energisa Minas-Rio)?
-          </summary>
-          <div class="answer">
-            Para a Energisa Minas-Rio no Rio de Janeiro:
-            <ul class="dash">
-              <li>Consumo mínimo: 150 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 10% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>14% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 18% (Bônus C) e 20% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Somente contas do RJ. Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio de Janeiro (Light)?
-          </summary>
-          <div class="answer">
-            Para a Light no Rio de Janeiro:
-            <ul class="dash">
-              <li>Consumo mínimo: 250 kWh</li>
-              <li>Forma de pagamento: Dois boletos</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 10% (Bônus B)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> STAND-BY</p>
-          </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio Grande do Norte (COSERN)?
-          </summary>
-          <div class="answer">
-            <p>Para a COSERN no Rio Grande do Norte:</p>
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Análise de Crédito: Sim</li>
-              <li>Troca de Titularidade: Sim</li>
-              <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) ou 14% (Bônus D)</li>
-            </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio Grande do Sul (CEEE - Equatorial)?
-          </summary>
-          <div class="answer">
-            <p>Para a CEEE (Equatorial) no Rio Grande do Sul:</p>
-            <ul class="dash compact">
-              <li>Análise de crédito necessária</li>
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li style="list-style-type: none;">Regras para consumo entre 100 e 149 KWh:
-                <ul class="dash">
-                  <li>Forma de pagamento: Dois boletos</li>
-                  <li>Desconto padrão: 8% (Bônus B)</li>
-                </ul>
-              </li>  
-              <li style="list-style-type: none;">Regras para consumo igual ou superior a 150 kWh:
-                <ul class="dash">
-                  <li>Forma de pagamento: Unificado</li>
-                  <li>Desconto padrão: 10% (Bônus B)</li>
-                </ul>   
-              </li>
-              <li>Descontos opcionais disponíveis para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Abaixo de 150 kWh é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para o Rio Grande do Sul (RGE)?
-          </summary>
-          <div class="answer" style="margin-top: -5px;">
-            <p style="margin-bottom: 0;">Para a RGE no Rio Grande do Sul:</p>
-            <ul class="dash extra-compact">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 8% (Bônus A) ou 10% (Bônus B)</li>
-              <li>Descontos opcionais disponíveis para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
-            </ul>
-            <p style="margin-top: 2px;"><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Santa Catarina (Celesc)?
-          </summary>
-          <div class="answer">
-            Para a Celesc em Santa Catarina:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 10% (Bônus B) para consumo de 100 kWh</li>
-              <li>Descontos opcionais disponíveis para consumo acima de 1.000 kWh: até 14% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. Aceitam ICMS abaixo de 17%, desde que não esteja zerado (ICMS 1 ou superior).</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para São Paulo (CPFL Paulista)?
-          </summary>
-          <div class="answer">
-            Para a CPFL Paulista em São Paulo:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 5% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>8% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 10% (Bônus C) e 12% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora. ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para São Paulo (CPFL Santa Cruz)?
-          </summary>
-          <div class="answer">
-            Para a CPFL Santa Cruz em São Paulo:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Dois Boletos</li>
-              <li>Prazo de injeção: 90 dias</li>
-              <li>Desconto padrão: 8% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Cliente com placas podem aderir. Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para São Paulo (CPFL Piratininga)?
-          </summary>
-          <div class="answer">
-            Para a CPFL Piratininga em São Paulo:
-            <ul class="dash">
-              <li>Consumo mínimo: 100 kWh</li>
-              <li>Forma de pagamento: Unificado</li>
-              <li>Prazo de injeção: 120 dias</li>
-              <li>Desconto padrão: 8% (Bônus A)</li>
-              <li>Descontos opcionais disponíveis:</li>
-              <li>10% (Bônus B)</li>
-              <li>Para consumo acima de 1.000 kWh: 12% (Bônus C) e 14% (Bônus D)</li>
-            </ul>
-            
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Quais são as condições para Tocantins (Energisa)?
-          </summary>
-          <div class="answer">
-            <p>Para a Energisa em Tocantins:</p>
-            <ul class="dash">
-              <li>Consumo de 100 a 149 kWh: Desconto de 10% (Bônus B), com pagamento em dois boletos.</li>
-              <li>Consumo acima de 150 kWh: Desconto de 10% (Bônus B), com pagamento unificado e possibilidade de troca de titularidade.</li>
-              <li>Consumo acima de 1.000 kWh: Descontos de 12% (Bônus C) ou 14% (Bônus D), com pagamento unificado e possibilidade de troca de titularidade.</li>
-              <li>Prazo de injeção: 90 dias</li>
-            </ul>
-            <p><strong>Observações:</strong> Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.</p>
-          </div>
-        </details>
 
 
       <!-- ADESÃO -->
@@ -991,38 +916,7 @@
         </div>
       </div>
     </section>
-  <!-- Por que existimos? -->
-  <section class="why-section" id="why">
-    <div class="container">
-      <h2 class="section-title">POR QUE EXISTIMOS?</h2>
-      <p class="section-subtitle">Fomos criados para levar sustentabilidade, praticidade e economia através de fontes energéticas sustentáveis que transformam a vida das pessoas.</p>
-      <a href="#simulacao" class="btn btn-primary">Saiba mais</a>
-    </div>
-  </section>
-
-  <!-- Como funciona a conexão green -->
-  <section class="how-section" id="how">
-    <div class="container">
-      <h2 class="section-title">COMO FUNCIONA A CONEXÃO GREEN</h2>
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Cadastro</h3>
-          <p>Faça seu cadastro e envie sua fatura de energia</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Análise</h3>
-          <p>Nossa equipe analisa seu perfil de consumo</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Economia</h3>
-          <p>Comece a economizar sem investimento inicial</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   </main>
 
   <!-- Footer -->
@@ -1208,6 +1102,47 @@
       }
     }
     
+    // FAQ Section Navigation
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const faqSections = document.querySelectorAll('.faq-sections .faq-section');
+    
+    function showSection(targetSection) {
+      // Hide all sections
+      faqSections.forEach(section => {
+        section.style.display = 'none';
+      });
+      
+      // Show target section
+      const target = document.getElementById(targetSection);
+      if (target) {
+        target.style.display = 'block';
+      }
+      
+      // Update active button
+      categoryButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      const activeBtn = document.querySelector(`[data-section="${targetSection}"]`);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+    }
+    
+    // Initialize - show first section
+    if (faqSections.length > 0) {
+      showSection('quem-somos');
+    }
+    
+    // Add click listeners to category buttons
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSection = button.getAttribute('data-section');
+        showSection(targetSection);
+      });
+    });
+    
     // Event listeners
     if (searchInput) {
       searchInput.addEventListener('input', search);
@@ -1224,15 +1159,33 @@
     // Acessibilidade: fechar outros details quando um é aberto
     summaries.forEach(summary => {
       summary.addEventListener('click', (e) => {
-        const currentDetail = e.currentTarget.parentNode;
+        e.preventDefault();
+        e.stopPropagation();
         
-        if (!currentDetail.open) {
-          details.forEach(detail => {
-            if (detail !== currentDetail) {
-              detail.open = false;
-            }
-          });
+        // Store current scroll position
+        const currentScrollY = window.scrollY;
+        
+        const currentDetail = e.currentTarget.parentNode;
+        const wasOpen = currentDetail.open;
+        
+        // Always close all details first
+        details.forEach(detail => {
+          detail.open = false;
+        });
+        
+        // If the clicked detail was closed, open it
+        if (!wasOpen) {
+          currentDetail.open = true;
         }
+        
+        // Force scroll position to stay the same
+        requestAnimationFrame(() => {
+          window.scrollTo(0, currentScrollY);
+          // Double check after DOM updates
+          setTimeout(() => {
+            window.scrollTo(0, currentScrollY);
+          }, 50);
+        });
       });
     });
   </script>
