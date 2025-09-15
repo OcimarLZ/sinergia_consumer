@@ -236,7 +236,7 @@ body::before {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url('https://www.igreenenergy.com.br/wp-content/uploads/2023/11/bg-hero-igreen.png');
+  /* background-image: url('https://www.igreenenergy.com.br/wp-content/uploads/2023/11/bg-hero-igreen.png'); */
   background-size: cover;
   background-position: center;
 }
