@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "codigo": "A",
+    "nome": "Bônus A",
+    "descricao": "Bônus tipo A",
+    "cor_hex": "#FF6B6B",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "codigo": "B",
+    "nome": "Bônus B",
+    "descricao": "Bônus tipo B",
+    "cor_hex": "#4ECDC4",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "codigo": "C",
+    "nome": "Bônus C",
+    "descricao": "Bônus tipo C",
+    "cor_hex": "#45B7D1",
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "codigo": "D",
+    "nome": "Bônus D",
+    "descricao": "Bônus tipo D",
+    "cor_hex": "#96CEB4",
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "codigo": "E",
+    "nome": "Bônus E",
+    "descricao": "Bônus tipo E",
+    "cor_hex": "#FFEAA7",
+    "ativo": true
+  }
+]

@@ -1382,9 +1382,10 @@
   </script>
 
   <!-- Scripts para funcionalidades da página -->
+  <script src="./static/simulacao-manager.js"></script>
   <script>
-    // Configuração dos dados estáticos
-    const DATA_BASE_URL = './static/data';
+    // Instância do gerenciador de simulação
+    let simuladorManager;
     
     // Elementos do formulário
      const leadForm = document.getElementById('leadForm');
@@ -1403,8 +1404,7 @@
     // Carregar estados ao inicializar
     async function carregarEstados() {
       try {
-        const response = await fetch(`${DATA_BASE_URL}/estados.json`);
-        const estados = await response.json();
+        const estados = await simuladorManager.obterEstados();
         
         estadoSelect.innerHTML = '<option value="">Selecione seu estado</option>';
         estados.forEach(estado => {
@@ -1424,15 +1424,17 @@
         distribuidoraSelect.innerHTML = '<option value="">Carregando...</option>';
         distribuidoraSelect.disabled = true;
         
-        const response = await fetch(`${DATA_BASE_URL}/distribuidoras.json`);
-        const distribuidoras = await response.json();
+        if (!simuladorManager) {
+          console.error('SimuladorManager não está inicializado');
+          distribuidoraSelect.innerHTML = '<option value="">Erro: Sistema não inicializado</option>';
+          return;
+        }
         
-        // Filtrar distribuidoras pelo estado selecionado
-        const distribuidorasDoEstado = distribuidoras.filter(d => d.estado_id == estadoId);
+        const distribuidoras = await simuladorManager.obterDistribuidorasPorEstado(estadoId);
         
         distribuidoraSelect.innerHTML = '<option value="">Selecione a distribuidora</option>';
-        if (distribuidorasDoEstado.length > 0) {
-          distribuidorasDoEstado.forEach(dist => {
+        if (distribuidoras.length > 0) {
+          distribuidoras.forEach(dist => {
             const option = document.createElement('option');
             option.value = dist.id;
             option.textContent = dist.nome;
@@ -1465,75 +1467,48 @@
       };
       
       try {
-        // Carregar dados necessários
-        const [distribuidorasResponse, regrasResponse] = await Promise.all([
-          fetch(`${DATA_BASE_URL}/distribuidoras.json`),
-          fetch(`${DATA_BASE_URL}/regras_desconto.json`)
-        ]);
-        
-        const distribuidoras = await distribuidorasResponse.json();
-        const regras = await regrasResponse.json();
-        
         // Dados da simulação
         const distribuidoraId = parseInt(distribuidoraSelect.value);
         const consumo = parseFloat(consumoInput.value);
         
-        // Encontrar distribuidora
-        const distribuidora = distribuidoras.find(d => d.id === distribuidoraId);
-        if (!distribuidora) {
-          throw new Error('Distribuidora não encontrada');
-        }
-        
-        // Verificar consumo mínimo
-        if (consumo < distribuidora.consumo_minimo) {
+        // Validar consumo
+        const validacaoConsumo = simuladorManager.validarConsumo(consumo);
+        if (!validacaoConsumo.valido) {
           const resultado = {
             elegivel: false,
-            motivo: `Consumo mínimo exigido: ${distribuidora.consumo_minimo} kWh`,
-            distribuidora: distribuidora.nome
+            motivo: validacaoConsumo.erro,
+            distribuidora: 'N/A'
           };
           loadingMsg.hidden = true;
           await processarResultadoCompleto(resultado, leadData);
           return;
         }
         
-        // Encontrar regra de desconto aplicável
-        const regrasDistribuidora = regras.filter(r => r.distribuidora_id === distribuidoraId && r.ativo);
-        let regraAplicavel = null;
+        // Realizar simulação completa
+        const simulacao = await simuladorManager.simular(distribuidoraId, consumo);
         
-        for (const regra of regrasDistribuidora) {
-          if (consumo >= regra.consumo_min && (regra.consumo_max === null || consumo <= regra.consumo_max)) {
-            regraAplicavel = regra;
-            break;
-          }
-        }
-        
-        if (!regraAplicavel) {
+        if (!simulacao.elegivel) {
           const resultado = {
             elegivel: false,
-            motivo: 'Consumo fora das faixas de desconto disponíveis',
-            distribuidora: distribuidora.nome
+            motivo: simulacao.mensagem || simulacao.motivo,
+            distribuidora: simulacao.distribuidora || 'N/A'
           };
           loadingMsg.hidden = true;
           await processarResultadoCompleto(resultado, leadData);
           return;
         }
         
-        // Calcular economia (estimativa baseada em R$ 0,65/kWh)
-        const valorKwh = 0.65;
-        const valorOriginal = consumo * valorKwh;
-        const descontoValor = valorOriginal * (regraAplicavel.desconto_percentual / 100);
-        const valorFinal = valorOriginal - descontoValor;
-        
+        // Resultado positivo
         const resultado = {
           elegivel: true,
-          distribuidora: distribuidora.nome,
+          distribuidora: simulacao.distribuidora,
           consumo_kwh: consumo,
-          desconto_percentual: regraAplicavel.desconto_percentual,
-          valor_original: valorOriginal,
-          valor_final: valorFinal,
-          economia_mensal: descontoValor,
-          economia_anual: descontoValor * 12,
-          tipo_bonus: regraAplicavel.tipo_bonus
+          desconto_percentual: simulacao.desconto_percentual,
+          valor_original: simulacao.valor_original,
+          valor_final: simulacao.valor_final,
+          economia_mensal: simulacao.economia_mensal,
+          economia_anual: simulacao.economia_anual,
+          tipo_bonus: simulacao.tipo_bonus
         };
         
         loadingMsg.hidden = true;
@@ -1666,8 +1641,19 @@
     }
     
     // Inicializar
-    document.addEventListener('DOMContentLoaded', function() {
-      carregarEstados();
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Inicializar o gerenciador de simulação
+        simuladorManager = new SimulacaoManager();
+        await simuladorManager.inicializar();
+        
+        // Carregar estados
+        await carregarEstados();
+      } catch (error) {
+        console.error('Erro ao inicializar:', error);
+        errorMsg.querySelector('p').textContent = 'Erro ao carregar dados do sistema';
+        errorMsg.hidden = false;
+      }
     });
     
     // Tornar função global para o botão

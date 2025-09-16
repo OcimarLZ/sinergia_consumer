@@ -1,0 +1,587 @@
+[
+  {
+    "id": 1,
+    "distribuidora_id": 1,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "distribuidora_id": 1,
+    "consumo_min": 1000,
+    "consumo_max": 5000,
+    "nome_faixa": "1.000 a 5.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "distribuidora_id": 1,
+    "consumo_min": 5000,
+    "consumo_max": 10000,
+    "nome_faixa": "5.000 a 10.000 kWh",
+    "ordem": 3,
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "distribuidora_id": 1,
+    "consumo_min": 10001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 10.000 kWh",
+    "ordem": 4,
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "distribuidora_id": 2,
+    "consumo_min": 150,
+    "consumo_max": null,
+    "nome_faixa": "150 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 6,
+    "distribuidora_id": 2,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 7,
+    "distribuidora_id": 3,
+    "consumo_min": 150,
+    "consumo_max": null,
+    "nome_faixa": "150 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "distribuidora_id": 4,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 9,
+    "distribuidora_id": 4,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "distribuidora_id": 5,
+    "consumo_min": 150,
+    "consumo_max": null,
+    "nome_faixa": "150 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "distribuidora_id": 5,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 12,
+    "distribuidora_id": 6,
+    "consumo_min": 250,
+    "consumo_max": null,
+    "nome_faixa": "250 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 13,
+    "distribuidora_id": 7,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 14,
+    "distribuidora_id": 7,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 15,
+    "distribuidora_id": 8,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 16,
+    "distribuidora_id": 8,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 17,
+    "distribuidora_id": 9,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 18,
+    "distribuidora_id": 9,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 19,
+    "distribuidora_id": 10,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 20,
+    "distribuidora_id": 10,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 21,
+    "distribuidora_id": 11,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kwh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 22,
+    "distribuidora_id": 11,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 23,
+    "distribuidora_id": 12,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 24,
+    "distribuidora_id": 12,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 25,
+    "distribuidora_id": 13,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 Kwh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 26,
+    "distribuidora_id": 13,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 27,
+    "distribuidora_id": 14,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 28,
+    "distribuidora_id": 14,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 29,
+    "distribuidora_id": 15,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 30,
+    "distribuidora_id": 15,
+    "consumo_min": 1000,
+    "consumo_max": 5000,
+    "nome_faixa": "1.000 a 5.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 31,
+    "distribuidora_id": 15,
+    "consumo_min": 5000,
+    "consumo_max": 10000,
+    "nome_faixa": "5000 a 10.000 kWh",
+    "ordem": 3,
+    "ativo": true
+  },
+  {
+    "id": 32,
+    "distribuidora_id": 15,
+    "consumo_min": 10001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 10.000 kWh",
+    "ordem": 4,
+    "ativo": true
+  },
+  {
+    "id": 33,
+    "distribuidora_id": 16,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 34,
+    "distribuidora_id": 16,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 35,
+    "distribuidora_id": 17,
+    "consumo_min": 150,
+    "consumo_max": null,
+    "nome_faixa": "150 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 36,
+    "distribuidora_id": 17,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 37,
+    "distribuidora_id": 18,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 38,
+    "distribuidora_id": 18,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 39,
+    "distribuidora_id": 19,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 40,
+    "distribuidora_id": 19,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 41,
+    "distribuidora_id": 20,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 42,
+    "distribuidora_id": 20,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 43,
+    "distribuidora_id": 21,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 44,
+    "distribuidora_id": 21,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 45,
+    "distribuidora_id": 22,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 46,
+    "distribuidora_id": 22,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 47,
+    "distribuidora_id": 23,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 48,
+    "distribuidora_id": 23,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 49,
+    "distribuidora_id": 24,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 50,
+    "distribuidora_id": 24,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 51,
+    "distribuidora_id": 25,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 52,
+    "distribuidora_id": 26,
+    "consumo_min": 100,
+    "consumo_max": 149,
+    "nome_faixa": "100 a 149 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 53,
+    "distribuidora_id": 26,
+    "consumo_min": 151,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 150 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 54,
+    "distribuidora_id": 26,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 3,
+    "ativo": true
+  },
+  {
+    "id": 55,
+    "distribuidora_id": 27,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 56,
+    "distribuidora_id": 27,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 57,
+    "distribuidora_id": 28,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 58,
+    "distribuidora_id": 28,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 59,
+    "distribuidora_id": 29,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 60,
+    "distribuidora_id": 29,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 61,
+    "distribuidora_id": 30,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 62,
+    "distribuidora_id": 30,
+    "consumo_min": 150,
+    "consumo_max": null,
+    "nome_faixa": "150 kWh",
+    "ordem": 2,
+    "ativo": true
+  },
+  {
+    "id": 63,
+    "distribuidora_id": 30,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 3,
+    "ativo": true
+  },
+  {
+    "id": 64,
+    "distribuidora_id": 31,
+    "consumo_min": 100,
+    "consumo_max": null,
+    "nome_faixa": "100 kWh",
+    "ordem": 1,
+    "ativo": true
+  },
+  {
+    "id": 65,
+    "distribuidora_id": 31,
+    "consumo_min": 1001,
+    "consumo_max": null,
+    "nome_faixa": "Acima de 1.000 kWh",
+    "ordem": 2,
+    "ativo": true
+  }
+]

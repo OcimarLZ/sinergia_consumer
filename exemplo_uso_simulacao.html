@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Simulação de Desconto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .sucesso {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .erro {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulação de Desconto - Exemplo</h1>
+    
+    <form id="simulacaoForm">
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select id="estado" required>
+                <option value="">Selecione um estado</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="distribuidora">Distribuidora:</label>
+            <select id="distribuidora" required>
+                <option value="">Primeiro selecione um estado</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="consumo">Consumo médio mensal (kWh):</label>
+            <input type="number" id="consumo" min="100" max="10000" required>
+        </div>
+        
+        <button type="submit">Simular Desconto</button>
+    </form>
+    
+    <div id="resultado"></div>
+    
+    <script src="static/simulacao-manager.js"></script>
+    <script>
+        let simuladorManager;
+        
+        // Inicializar simulador
+        async function inicializar() {
+            try {
+                simuladorManager = new SimulacaoManager();
+                await simuladorManager.inicializar();
+                
+                // Carregar estados
+                const estados = simuladorManager.obterEstados();
+                const estadoSelect = document.getElementById('estado');
+                
+                estados.forEach(estado => {
+                    const option = document.createElement('option');
+                    option.value = estado.id;
+                    option.textContent = estado.nome;
+                    estadoSelect.appendChild(option);
+                });
+                
+                console.log('Simulador inicializado com sucesso!');
+            } catch (error) {
+                console.error('Erro ao inicializar:', error);
+                mostrarResultado('Erro ao carregar o sistema. Tente novamente.', false);
+            }
+        }
+        
+        // Carregar distribuidoras por estado
+        document.getElementById('estado').addEventListener('change', function() {
+            const estadoId = parseInt(this.value);
+            const distribuidoraSelect = document.getElementById('distribuidora');
+            
+            // Limpar distribuidoras
+            distribuidoraSelect.innerHTML = '<option value="">Selecione uma distribuidora</option>';
+            
+            if (estadoId) {
+                const distribuidoras = simuladorManager.obterDistribuidorasPorEstado(estadoId);
+                
+                distribuidoras.forEach(dist => {
+                    const option = document.createElement('option');
+                    option.value = dist.id;
+                    option.textContent = dist.nome;
+                    distribuidoraSelect.appendChild(option);
+                });
+            }
+        });
+        
+        // Processar simulação
+        document.getElementById('simulacaoForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const distribuidoraId = parseInt(document.getElementById('distribuidora').value);
+            const consumo = parseFloat(document.getElementById('consumo').value);
+            
+            if (!distribuidoraId || !consumo) {
+                mostrarResultado('Por favor, preencha todos os campos.', false);
+                return;
+            }
+            
+            try {
+                const resultado = await simuladorManager.simular(distribuidoraId, consumo);
+                
+                if (resultado.elegivel) {
+                    const html = `
+                        <h3>✅ ${resultado.mensagem}</h3>
+                        <p><strong>Distribuidora:</strong> ${resultado.distribuidora}</p>
+                        <p><strong>Consumo informado:</strong> ${resultado.consumo} kWh</p>
+                        <p><strong>Faixa de consumo:</strong> ${resultado.faixa_consumo.consumo_min} - ${resultado.faixa_consumo.consumo_max || '∞'} kWh</p>
+                        <p><strong>Tipo de bônus:</strong> ${resultado.tipo_bonus.nome}</p>
+                        <p><strong>Desconto aplicável:</strong> ${resultado.desconto_percentual}%</p>
+                        ${resultado.observacoes ? `<p><strong>Observações:</strong> ${resultado.observacoes}</p>` : ''}
+                        <p><em>${resultado.aviso_valores || ''}</em></p>
+                    `;
+                    mostrarResultado(html, true);
+                } else {
+                    mostrarResultado(`❌ ${resultado.motivo}`, false);
+                }
+            } catch (error) {
+                console.error('Erro na simulação:', error);
+                mostrarResultado('Erro interno. Tente novamente.', false);
+            }
+        });
+        
+        function mostrarResultado(html, sucesso) {
+            const div = document.getElementById('resultado');
+            div.innerHTML = html;
+            div.className = `resultado ${sucesso ? 'sucesso' : 'erro'}`;
+        }
+        
+        // Inicializar quando a página carregar
+        window.addEventListener('load', inicializar);
+    </script>
+</body>
+</html>

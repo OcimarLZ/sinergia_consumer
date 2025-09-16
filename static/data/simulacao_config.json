@@ -1,0 +1,244 @@
+{
+  "version": "1.0",
+  "configuracao": {
+    "tipo_bonus_padrao_id": 2,
+    "usar_apenas_bonus_padrao": true,
+    "exibir_na_simulacao": {
+      "status_elegibilidade": true,
+      "percentual_desconto": true,
+      "valor_economia": true,
+      "detalhes_faixa": false
+    }
+  },
+  "regras_simulacao": {
+    "consumo_minimo_kwh": 100,
+    "consumo_maximo_kwh": 10000,
+    "validar_distribuidora": true
+  },
+  "distribuidoras_desconto": {
+    "1": {
+      "nome": "CEMIG",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 100,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 100 kWh"
+    },
+    "2": {
+      "nome": "Energisa Minas Rio",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "3": {
+      "nome": "EDP",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "4": {
+      "nome": "Enel",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 100,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 100 kWh"
+    },
+    "5": {
+      "nome": "Energisa Paraíba",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "6": {
+      "nome": "Energisa Sergipe",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "7": {
+      "nome": "Energisa Tocantins",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "8": {
+      "nome": "Energisa Mato Grosso do Sul",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "9": {
+      "nome": "Energisa Mato Grosso",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "10": {
+      "nome": "Energisa Rondônia",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "11": {
+      "nome": "Equatorial Energia Alagoas",
+      "desconto_percentual": 10.0,
+      "consumo_minimo": 0,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para qualquer consumo"
+    },
+    "12": {
+      "nome": "Coelba",
+      "desconto_percentual": 10.0,
+      "consumo_minimo": 0,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para qualquer consumo"
+    },
+    "13": {
+      "nome": "Cosern",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "14": {
+      "nome": "Energisa Nova Friburgo",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "15": {
+      "nome": "Light",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "16": {
+      "nome": "Enel Rio",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 100,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 100 kWh"
+    },
+    "17": {
+      "nome": "Copel",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "18": {
+      "nome": "CPFL Paulista",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "19": {
+      "nome": "CPFL Piratininga",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 100,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 100 kWh"
+    },
+    "20": {
+      "nome": "Elektro",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "21": {
+      "nome": "Enel São Paulo",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 100,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 100 kWh"
+    },
+    "22": {
+      "nome": "CPFL Santa Cruz",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "23": {
+      "nome": "Energisa Sul-Sudeste",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "24": {
+      "nome": "CEEE",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "25": {
+      "nome": "RGE",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "26": {
+      "nome": "Celesc",
+      "desconto_percentual": 15.0,
+      "consumo_minimo": 1000,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 1.000 kWh"
+    },
+    "27": {
+      "nome": "Energisa Acre",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "28": {
+      "nome": "Energisa Amazonas",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "29": {
+      "nome": "Energisa Roraima",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    },
+    "30": {
+      "nome": "Celesc Distribuição",
+      "desconto_percentual": 15.0,
+      "consumo_minimo": 1000,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 1.000 kWh"
+    },
+    "31": {
+      "nome": "Energisa Borborema",
+      "desconto_percentual": 16.0,
+      "consumo_minimo": 150,
+      "elegivel": true,
+      "observacoes": "Desconto aplicável para consumo acima de 150 kWh"
+    }
+  },
+  "mensagens": {
+    "apto": "Parabéns! Você é elegível para nosso programa de desconto.",
+    "nao_apto": "Infelizmente, seu perfil não se enquadra nos critérios atuais.",
+    "erro_calculo": "Não foi possível calcular o desconto. Tente novamente.",
+    "distribuidora_nao_encontrada": "Distribuidora não encontrada em nossa base de dados.",
+    "sem_calculo_valores": "Os valores de economia serão calculados após análise detalhada."
+  }
+}

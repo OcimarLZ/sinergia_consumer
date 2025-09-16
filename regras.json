@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "cemig-mg",
+    "nome": "CEMIG",
+    "estado_nome": "Minas Gerais",
+    "estado_sigla": "MG",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Atendemos órgãos públicos, clientes com placas, grupo A, classificação irrigação noturna e atendemos clientes com ICMS, não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "cemig-mg-rule-1",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado ou dois boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "cemig-mg-rule-2",
+        "kwh_minimo": "1.000 a 5.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% Bônus B",
+          "20% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado ou dois boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "cemig-mg-rule-3",
+        "kwh_minimo": "5.000 a 10.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% Bônus B",
+          "20% Bônus B",
+          "24% Bônus C"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado ou dois boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "cemig-mg-rule-4",
+        "kwh_minimo": "Acima de 10.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% Bônus B",
+          "20% Bônus B",
+          "24% Bônus C",
+          "28% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado ou dois boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "energisa-minas-rio-mg",
+    "nome": "Energisa Minas Rio",
+    "estado_nome": "Minas Gerais",
+    "estado_sigla": "MG",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Somente contas de MG, Clientes com placas, grupo A e clientes que compensam ICMS, não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "energisa-minas-rio-mg-rule-5",
+        "kwh_minimo": "150 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-minas-rio-mg-rule-6",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B",
+          "18% Bônus C",
+          "20% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "edp-es",
+    "nome": "EDP",
+    "estado_nome": "Espírito Santo",
+    "estado_sigla": "ES",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "edp-es-rule-7",
+        "kwh_minimo": "150 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "enel-rj",
+    "nome": "Enel",
+    "estado_nome": "Rio de Janeiro",
+    "estado_sigla": "RJ",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "enel-rj-rule-8",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "enel-rj-rule-9",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "energisa-minas-rio-rj",
+    "nome": "Energisa Minas-Rio",
+    "estado_nome": "Rio de Janeiro",
+    "estado_sigla": "RJ",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Somente contas do RJ, não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "energisa-minas-rio-rj-rule-10",
+        "kwh_minimo": "150 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-minas-rio-rj-rule-11",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B",
+          "18% Bônus C",
+          "20% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "light-rj",
+    "nome": "Light",
+    "estado_nome": "Rio de Janeiro",
+    "estado_sigla": "RJ",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "STAND-BY",
+    "regras_desconto": [
+      {
+        "id": "light-rj-rule-12",
+        "kwh_minimo": "250 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "energisa-sul-sudeste-sp",
+    "nome": "Energisa Sul-sudeste",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "energisa-sul-sudeste-sp-rule-13",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-sul-sudeste-sp-rule-14",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "elektro-sp",
+    "nome": "ELEKTRO",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Login e senha da distribuidora necessário, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "elektro-sp-rule-15",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "elektro-sp-rule-16",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "edp-sp",
+    "nome": "EDP",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "edp-sp-rule-17",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "edp-sp-rule-18",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "cpfl-santa-cruz-sp",
+    "nome": "CPFL Santa Cruz",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Cliente com placas podem aderir , não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "cpfl-santa-cruz-sp-rule-19",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "cpfl-santa-cruz-sp-rule-20",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "cpfl-paulista-sp",
+    "nome": "CPFL Paulista",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "cpfl-paulista-sp-rule-21",
+        "kwh_minimo": "100 kwh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "5% Bônus A",
+        "descontos_opcionais": [
+          "8% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "cpfl-paulista-sp-rule-22",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "5% Bônus A",
+        "descontos_opcionais": [
+          "8% Bônus B",
+          "10% Bônus C",
+          "12% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "cpfl-piratininga-sp",
+    "nome": "CPFL Piratininga",
+    "estado_nome": "São Paulo",
+    "estado_sigla": "SP",
+    "regiao": "Sudeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "cpfl-piratininga-sp-rule-23",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "cpfl-piratininga-sp-rule-24",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "equatorial-go",
+    "nome": "Equatorial",
+    "estado_nome": "Goiás",
+    "estado_sigla": "GO",
+    "regiao": "Centro-Oeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "equatorial-go-rule-25",
+        "kwh_minimo": "100 Kwh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "equatorial-go-rule-26",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B",
+          "18% Bônus C",
+          "20% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "energisa-mt",
+    "nome": "Energisa",
+    "estado_nome": "Mato Grosso",
+    "estado_sigla": "MT",
+    "regiao": "Centro-Oeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora. Desconto de 20% válido até 31/07/2025.",
+    "regras_desconto": [
+      {
+        "id": "energisa-mt-rule-27",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-mt-rule-28",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B",
+          "18% Bônus C",
+          "20% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "energisa-ms",
+    "nome": "Energisa",
+    "estado_nome": "Mato Grosso do Sul",
+    "estado_sigla": "MS",
+    "regiao": "Centro-Oeste",
+    "regras_gerais_observacoes": "Clientes com placas podem aderir, não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "energisa-ms-rule-29",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "energisa-ms-rule-30",
+        "kwh_minimo": "1.000 a 5.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% ou 20% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "energisa-ms-rule-31",
+        "kwh_minimo": "5000 a 10.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% ou 20% Bônus B",
+          "24% Bônus C"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "energisa-ms-rule-32",
+        "kwh_minimo": "Acima de 10.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "16% ou 20% Bônus B",
+          "24% Bônus C",
+          "28% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "elektro-ms",
+    "nome": "ELEKTRO",
+    "estado_nome": "Mato Grosso do Sul",
+    "estado_sigla": "MS",
+    "regiao": "Centro-Oeste",
+    "regras_gerais_observacoes": "Login e senha da distribuidora necessário, ICMS abaixo de 17% não é permitido. Aceito apenas os municípios Anaurilândia, Brasilândia. Figueirão, Santa Rita do Pardo, Selvíria, Três Lagoas",
+    "regras_desconto": [
+      {
+        "id": "elektro-ms-rule-33",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "elektro-ms-rule-34",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "equatorial-al",
+    "nome": "Equatorial",
+    "estado_nome": "Alagoas",
+    "estado_sigla": "AL",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "equatorial-al-rule-35",
+        "kwh_minimo": "150 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "equatorial-al-rule-36",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "enel-ce",
+    "nome": "ENEL",
+    "estado_nome": "Ceará",
+    "estado_sigla": "CE",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "enel-ce-rule-37",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": false
+      },
+      {
+        "id": "enel-ce-rule-38",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus A",
+        "descontos_opcionais": [
+          "14% Bônus B",
+          "18% Bônus C",
+          "20% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "energisa-pb",
+    "nome": "Energisa",
+    "estado_nome": "Paraíba",
+    "estado_sigla": "PB",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "energisa-pb-rule-39",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-pb-rule-40",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "neonergia-pe",
+    "nome": "Neonergia",
+    "estado_nome": "Pernambuco",
+    "estado_sigla": "PE",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Placas não permitido; sem débitos, não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "neonergia-pe-rule-41",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "neonergia-pe-rule-42",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "cosern-rn",
+    "nome": "COSERN",
+    "estado_nome": "Rio Grande do Norte",
+    "estado_sigla": "RN",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "cosern-rn-rule-43",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "cosern-rn-rule-44",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "equatorial-pi",
+    "nome": "Equatorial",
+    "estado_nome": "Piauí",
+    "estado_sigla": "PI",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido",
+    "regras_desconto": [
+      {
+        "id": "equatorial-pi-rule-45",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "equatorial-pi-rule-46",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "equatorial-ma",
+    "nome": "Equatorial",
+    "estado_nome": "Maranhão",
+    "estado_sigla": "MA",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "equatorial-ma-rule-47",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "equatorial-ma-rule-48",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "coelba-ba",
+    "nome": "Coelba",
+    "estado_nome": "Bahia",
+    "estado_sigla": "BA",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "Aceitamos clientes com placas, não é necessário informar login e senha da distribuidora.",
+    "regras_desconto": [
+      {
+        "id": "coelba-ba-rule-49",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "coelba-ba-rule-50",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "energisa-se",
+    "nome": "Energisa",
+    "estado_nome": "Sergipe",
+    "estado_sigla": "SE",
+    "regiao": "Nordeste",
+    "regras_gerais_observacoes": "STAND-BY",
+    "regras_desconto": [
+      {
+        "id": "energisa-se-rule-51",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "150 dias",
+        "forma_pagamento": "Dois Boletos",
+        "troca_titularidade": false
+      }
+    ]
+  },
+  {
+    "id": "energisa-to",
+    "nome": "Energisa",
+    "estado_nome": "Tocantins",
+    "estado_sigla": "TO",
+    "regiao": "Norte",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "energisa-to-rule-52",
+        "kwh_minimo": "100 a 149 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "energisa-to-rule-53",
+        "kwh_minimo": "Acima de 150 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "energisa-to-rule-54",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "equatorial-pa",
+    "nome": "Equatorial",
+    "estado_nome": "Pará",
+    "estado_sigla": "PA",
+    "regiao": "Norte",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora",
+    "regras_desconto": [
+      {
+        "id": "equatorial-pa-rule-55",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "equatorial-pa-rule-56",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "120 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "copel-pr",
+    "nome": "Copel",
+    "estado_nome": "Paraná",
+    "estado_sigla": "PR",
+    "regiao": "Sul",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido",
+    "regras_desconto": [
+      {
+        "id": "copel-pr-rule-57",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "5% Bônus A",
+        "descontos_opcionais": [
+          "8% Bônus B"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "copel-pr-rule-58",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "5% Bônus A",
+        "descontos_opcionais": [
+          "8% Bônus B",
+          "10% Bônus C",
+          "12% Bônus D"
+        ],
+        "analise_credito": true,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "celesc-sc",
+    "nome": "Celesc",
+    "estado_nome": "Santa Catarina",
+    "estado_sigla": "SC",
+    "regiao": "Sul",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, aceitam ICMS abaixo de 17%, desde que não esteja zerado: Celesc SC - ICMS 1 ou superior RGE RS - ICMS 1 ou superior CEEE RS - ICMS 1 ou superior (100kwh até 149kwh) Elektro (SP E MS) - ICMS 1 ou superior (100kwh até 249)",
+    "regras_desconto": [
+      {
+        "id": "celesc-sc-rule-59",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "celesc-sc-rule-60",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "ceee-equatorial-rs",
+    "nome": "CEEE (Equatorial)",
+    "estado_nome": "Rio Grande do Sul",
+    "estado_sigla": "RS",
+    "regiao": "Sul",
+    "regras_gerais_observacoes": "Abaixo de 150 kwh é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "ceee-equatorial-rs-rule-61",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "150 kWh (implícito)",
+        "desconto_padrao": "8% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Dois boletos",
+        "troca_titularidade": false
+      },
+      {
+        "id": "ceee-equatorial-rs-rule-62",
+        "kwh_minimo": "150 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "ceee-equatorial-rs-rule-63",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "10% Bônus B",
+        "descontos_opcionais": [
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  },
+  {
+    "id": "rge-rs",
+    "nome": "RGE",
+    "estado_nome": "Rio Grande do Sul",
+    "estado_sigla": "RS",
+    "regiao": "Sul",
+    "regras_gerais_observacoes": "Não é necessário informar login e senha da distribuidora, ICMS abaixo de 17% não é permitido.",
+    "regras_desconto": [
+      {
+        "id": "rge-rs-rule-64",
+        "kwh_minimo": "100 kWh",
+        "kwh_maximo": "1.000 kWh (implícito)",
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      },
+      {
+        "id": "rge-rs-rule-65",
+        "kwh_minimo": "Acima de 1.000 kWh",
+        "kwh_maximo": null,
+        "desconto_padrao": "8% Bônus A",
+        "descontos_opcionais": [
+          "10% Bônus B",
+          "12% Bônus C",
+          "14% Bônus D"
+        ],
+        "analise_credito": false,
+        "prazo_injecao": "90 dias",
+        "forma_pagamento": "Unificado",
+        "troca_titularidade": true
+      }
+    ]
+  }
+]
